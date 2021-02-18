@@ -1,5 +1,30 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <script>
+        var url="/asset";
+                                      
+
+        fetch(url, {  //provide URL of the processing page
+                 method: "POST",
+
+                 headers: {
+                     "Content-Type": "text/xml"
+                 },
+                 body: {
+                   //  "assetType":"image",
+
+                 }
+             })
+            // .then(response => response.json())
+             .then(async (body) => 
+             {
+
+             });
+    </script>
+</head>
+
 <body>
 
 <h1>My First Heading</h1>
