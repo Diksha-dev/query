@@ -30,6 +30,8 @@ app.post("/secondpage", async function (req, res) {
    
    var access_token= await getacesstoken(clientidSource,clientsecretSource,granttypeSource);
 
+   res.sendFile(path.join(__dirname + '/secondpage.html'));
+
    var FormData = require('form-data');
    var data = new FormData();
    data.append('grant_type', 'client_credentials');
@@ -58,7 +60,7 @@ app.post("/secondpage", async function (req, res) {
   //   console.log(error);
    });
   
-   res.sendFile(path.join(__dirname + '/secondpage.html'));
+   
 
    app.post("/asset", async (reqCall,resCall)=>
    {
@@ -94,7 +96,7 @@ app.post("/secondpage", async function (req, res) {
          targetDEArray.push(ResultList[key].Name);
        //   ResultListMap[ResultList[key].Name] = ResultList[key] ; 
         }
-
+        console.log("targetDEArray    :   " +  targetDEArray);
       resCall.send({targetDEArray:targetDEArray});
 
      });
