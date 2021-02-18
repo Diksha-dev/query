@@ -98,7 +98,7 @@ app.post("/secondpage", async function (req, res) {
         }
         console.log("targetDEArray    :   " +  targetDEArray);
      
-        resCall.json({targetDEArray:targetDEArray});
+        resCall.send(targetDEArray);
      });
    
      
