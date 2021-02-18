@@ -49,7 +49,7 @@ app.post("/secondpage", function (req, res) {
    
     // console.log(JSON.stringify(response.data));
     token=response.data.access_token;
-    //console.log(token);
+    console.log("token" + token);
    })
    .catch(function (error) {
   //   console.log(error);
