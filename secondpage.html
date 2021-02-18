@@ -18,10 +18,16 @@
                  },
                  dataType : "json"
              })
-             .then(response => response.text())
+          //   .then(response => response.text())
   .then(data => {
     console.log(data);
-    console.log(data.targetDEArray);
+  //  console.log(data.targetDEArray);
+
+  for ( i in data ) 
+  {
+      console.log(i);
+      console.log(data[i]);
+  }
 
     
   });
