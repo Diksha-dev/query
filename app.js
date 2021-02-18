@@ -84,13 +84,13 @@ let result = await promise;
      SourceListDEResult = xmlParser.toJson(SourceListDEResult);
      console.log("yeh hai de ki response ki json body" +SourceListDEResult);
      SourceListDEResult = JSON.parse(SourceListDEResult);
-     var ResultList  = SourceListDEResult.soapEnvelope.soapBody.RetrieveResponseMsg.Results;
+ //    var ResultList  = SourceListDEResult.soapEnvelope.soapBody.RetrieveResponseMsg.Results;
         //console.log("Result list " + JSON.stringify(ResultList)); 
         var targetDEArray = [];
         
         for (var key in ResultList) 
        {
-        console.log("Data Extension " + ResultList[key].Name)   
+      //  console.log("Data Extension " + ResultList[key].Name)   
          targetDEArray.push(ResultList[key].Name);
       //   ResultListMap[ResultList[key].Name] = ResultList[key] ; 
        }
