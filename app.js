@@ -20,7 +20,7 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname + '/loginpage.html'));
 })
 app.set('view engine', 'html');
-app.post("/secondpage", function (req, res) {
+app.post("/secondpage", async function (req, res) {
    var clientidSource = req.body.clientid;
    var clientsecretSource = req.body.clientsecret;
    var clinentauthurl= req.body.authurl;
