@@ -151,9 +151,9 @@ let result = await promise;
 
   
   
-   fun1();
+ //  fun1();
    
-   res.sendFile(path.join(__dirname + '/secondpage.html'));
+ //  res.sendFile(path.join(__dirname + '/secondpage.html'));
 
 });
 
