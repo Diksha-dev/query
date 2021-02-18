@@ -97,7 +97,7 @@ app.post("/secondpage", async function (req, res) {
        //   ResultListMap[ResultList[key].Name] = ResultList[key] ; 
         }
         console.log("targetDEArray    :   " +  targetDEArray);
-      resCall.send({targetDEArray:targetDEArray});
+      resCall.json({targetDEArray:targetDEArray});
 
      });
      
