@@ -52,7 +52,7 @@ app.post("/secondpage", function (req, res) {
     //console.log(token);
    })
    .catch(function (error) {
-     console.log(error);
+  //   console.log(error);
    });
   
 
