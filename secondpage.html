@@ -21,12 +21,13 @@
           .then(response => response.text())
   .then(data => {
    console.log(data);
+   var parsedData = JSON.parse(data);
  //   console.log(data.targetDEArray);
 
-  for ( i in data ) 
+  for ( i in parsedData ) 
   {
      // console.log(i);
-      console.log(data[i]);
+      console.log(parsedData[i]);
  }
 
     
