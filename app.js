@@ -24,7 +24,8 @@ app.post("/secondpage", async function (req, res) {
    var clientidSource = req.body.clientid;
    var clientsecretSource = req.body.clientsecret;
    var clinentauthurl= req.body.authurl;
-   console.log('Avi '+ clientidSource,'Avi1 '+ clientsecretSource,'Avi2 '+ clinentauthurl);
+   var granttypeSource = "client_credentials" ;
+  //  console.log('Avi '+ clientidSource,'Avi1 '+ clientsecretSource,'Avi2 '+ clinentauthurl);
    //alert('Avi'+ clientidSource,'Avi1'+ clientsecretSource,'Avi2'+ clinentauthurl);
    
    var access_token= await getacesstoken(clientidSource,clientsecretSource,granttypeSource);
