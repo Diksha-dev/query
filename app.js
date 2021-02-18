@@ -82,17 +82,17 @@ let result = await promise;
      xml=response.body;
      SourceListDEResult = xml.replace(/:/g, "");
      SourceListDEResult = xmlParser.toJson(SourceListDEResult);
-     //console.log("yeh hai de ki response ki json body" +SourceListDEResult);
+     console.log("yeh hai de ki response ki json body" +SourceListDEResult);
      SourceListDEResult = JSON.parse(SourceListDEResult);
      var ResultList  = SourceListDEResult.soapEnvelope.soapBody.RetrieveResponseMsg.Results;
         //console.log("Result list " + JSON.stringify(ResultList)); 
         var targetDEArray = [];
-        ResultListMap = {};
+        
         for (var key in ResultList) 
        {
         console.log("Data Extension " + ResultList[key].Name)   
          targetDEArray.push(ResultList[key].Name);
-         ResultListMap[ResultList[key].Name] = ResultList[key] ; 
+      //   ResultListMap[ResultList[key].Name] = ResultList[key] ; 
        }
      
     });
