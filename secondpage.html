@@ -13,9 +13,10 @@
                      "Content-Type": "application/json"
                  },
                  body: {
-                   //  "assetType":"image",
+                     "assetType":"image",
 
-                 }
+                 },
+                 dataType : "json"
              })
              .then(response => console.log(response.json()))
              .then(async (body) => 
