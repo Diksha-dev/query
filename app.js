@@ -87,10 +87,12 @@ app.post("/secondpage", function (req, res) {
          for (var key in ResultList) 
         {
          console.log("Data Extension " + ResultList[key].Name)   
-          targetDEArray.push(ResultList[key].Name);
+         targetDEArray.push(ResultList[key].Name);
        //   ResultListMap[ResultList[key].Name] = ResultList[key] ; 
         }
-      
+
+      res.json({targetDEArray:targetDEArray});
+
      });
      
      
