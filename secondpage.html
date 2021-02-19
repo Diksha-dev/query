@@ -37,12 +37,22 @@
    var res = deArray.toString().split(',');
    console.log("yeh res hai :  " + res);
    
-   for (i in res)
+ /*  for (i in res)
    {
     console.log(i);
     console.log(res[i]);
     document.getElementById("deArray").innerHTML = res[i] ;
 
+   } */
+   function listItem(item){
+    for (var i = 0; i < item.res.length; i++){
+      var list = item.res[i];
+      
+      list = document.createElement('li');
+      document.getElementById('deArray').appendChild(list);
+      
+      console.log(list);
+    }  
    }
    
 
@@ -74,7 +84,7 @@
         <div class="slds-panel slds-size_small slds-panel_docked slds-panel_docked-left slds-is-open" style="position: fixed;" aria-hidden="false">
           <div class="slds-panel__header">
               <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">deArray</h2>
-           </div>
+             </div>
                  <div class="slds-panel__body">
   
                      <div class="demo-only" style="width:100%">
