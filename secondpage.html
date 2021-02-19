@@ -26,7 +26,7 @@
 
   for ( i in parsedData ) 
    {
-     // console.log(i);
+    // console.log(i);
       console.log(parsedData[i]);
     //  console.log()
    }
@@ -38,9 +38,43 @@
 
 <body>
 
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
+    <div class="slds-float_left" style="width:15%;height:100%;">
+        <div class="slds-panel slds-size_small slds-panel_docked slds-panel_docked-left slds-is-open" style="position: fixed;" aria-hidden="false">
+          <div class="slds-panel__header">
+              <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">CONTENT BUILDER ASSETS</h2>
+           </div>
+                 <div class="slds-panel__body">
+  
+                     <div class="demo-only" style="width:100%">
+                     <nav class="slds-nav-vertical" aria-label="Sub page">
+                     <div class="slds-nav-vertical__section">
+                             <h2 id="entity-header" class="slds-nav-vertical__title"> </h2>
+                             <ul aria-describedby="entity-header">
+                                 <li class="slds-nav-vertical__item">
+                                  <button class="slds-nav-vertical__action slds-button" onclick="imagebutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Images</button>
+                                 </li>
+                                 <li class="slds-nav-vertical__item ">
+                                  <button class="slds-nav-vertical__action slds-button" onclick="emailbutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Emails</button>
+                                 </li>
+                                 <li class="slds-nav-vertical__item " >
+                                  <button class="slds-nav-vertical__action slds-button" onclick="templatebutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Templates</button>
+                                 </li>
+                                 <li class="slds-nav-vertical__item ">
+                                  <button class="slds-nav-vertical__action slds-button" onclick="imagebutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Documents</button>
+                                 </li>
+                                 <li class="slds-nav-vertical__item ">
+                                  <button class="slds-nav-vertical__action slds-button" onclick="contentblockbutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Content blocks</button>
+                                 </li>
+                                 <li class="slds-nav-vertical__item ">
+                                  <button class="slds-nav-vertical__action slds-button" onclick="queryActivity()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Query Activities</button>
+                                 </li>
+                                 
+                             </ul>
+                     </div>
+                     </nav>
+                    </div>
+             </div> 
+   </div>
 
 </body>
 </html>
