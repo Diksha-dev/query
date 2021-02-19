@@ -31,7 +31,12 @@
       console.log(parsedData[i]);
       deArray.push(parsedData[i]);
       console.log("deArray" + deArray );
-      document.getElementById("deArray").innerHTML = "/n" +  parsedData[i]  + "/n" ;
+  //    document.getElementById("deArray").innerHTML = "/n" +  parsedData[i]  + "/n" ;
+   }
+   for (i in deArray)
+   {
+    document.getElementById("deArray").innerHTML = "/n" +  deArray[i]  + "/n" ;
+
    }
    
 
