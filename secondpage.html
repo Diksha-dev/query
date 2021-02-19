@@ -25,17 +25,20 @@
           .then(response => response.text())
   .then(data => {
    console.log(data);
-   var parsedData = JSON.parse(data);
-   console.log("parsed data  : " + JSON.stringify(parsedData.targetDEArray) );
+   var parsedData = JSON.parse(data).targetDEArray;
+   console.log("parsed data  : " + JSON.stringify(parsedData) );
    var a = "55C8455F-B11D-4A56-927A-6D482CD65C20";
    console.log(parsedData.targetDEArray.a); 
   // console.log();
 
  //   console.log(data.targetDEArray);
 
- //for (const [keyimage, value] of Object.entries(map)) 
- //{
- //}
+ for (const [keyimage, value] of Object.entries(parsedData)) 
+ {
+        console.log("yeh key hai : " + keyimage);
+        
+        console.log("yeh value hai : " + value);
+ }
  
  
  
