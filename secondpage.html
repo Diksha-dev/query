@@ -33,9 +33,11 @@
       console.log("deArray" + deArray );
   //    document.getElementById("deArray").innerHTML = "/n" +  parsedData[i]  + "/n" ;
    }
-   for (i in deArray)
+   var res = deArray.split(",");
+   for (i in res)
    {
-       console.log(i)
+    console.log(i);
+    console.log(res[i]);
     document.getElementById("deArray").innerHTML = "/n" + i + "/n" ;
 
    }
