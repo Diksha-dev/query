@@ -88,12 +88,14 @@ app.post("/secondpage", async function (req, res) {
       SourceListDEResult = JSON.parse(SourceListDEResult);
       var ResultList  = SourceListDEResult.soapEnvelope.soapBody.RetrieveResponseMsg.Results;
          //console.log("Result list " + JSON.stringify(ResultList)); 
-         var targetDEArray = [];
+         var targetDEArray = {};
          
          for (var key in ResultList) 
         {
          console.log("Data Extension " + ResultList[key].Name)   
-         targetDEArray.push(ResultList[key].Name);
+         console.log("Data Extension key " + ResultList[key].CustomerKey)   
+         targetDEArray[ResultList[key].CustomerKey]= ResultList[key].Name ; 
+      //   targetDEArray.push(ResultList[key].Name);
        //   ResultListMap[ResultList[key].Name] = ResultList[key] ; 
         }
         console.log("targetDEArray    :   " +  targetDEArray);
