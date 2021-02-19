@@ -26,20 +26,32 @@
   .then(data => {
    console.log(data);
    var parsedData = JSON.parse(data);
+   console.log("parsed data  : " + parsedData);
+
+   
  //   console.log(data.targetDEArray);
 
- var deArray = []
- for ( i in parsedData ) 
+ //for (const [keyimage, value] of Object.entries(map)) 
+ //{
+ //}
+ 
+ 
+ 
+ 
+ 
+ 
+ //var deArray = []
+ /*for ( i in parsedData ) 
    {
     // console.log(i);
       console.log(parsedData[i]);
       deArray.push(parsedData[i]);
       console.log("deArray" + deArray );
   //    document.getElementById("deArray").innerHTML = "/n" +  parsedData[i]  + "/n" ;
-   }
-   alert(typeof deArray);
-   var res = deArray.toString().split(',');
-   console.log("yeh res hai :  " + res);
+   } */
+  // alert(typeof deArray);
+ //  var res = deArray.toString().split(',');
+ //  console.log("yeh res hai :  " + res);
    
  /*  for (i in res)
    {
@@ -49,7 +61,7 @@
 
    } */
 
-   var str = '<ul>'
+  /* var str = '<ul>'
 
     res.forEach(function(slide) {
       str += '<li>'+ slide + '</li>';
@@ -58,8 +70,8 @@
     str += '</ul>';
     document.getElementById("Data Extensions").innerHTML = str;
    
-   
-    
+   */
+
 
     
   });
