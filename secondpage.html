@@ -57,8 +57,27 @@
                 document.body.append(checkbox.value + ' ');
             }
             }
- }
+      
+     }
 
+     var url="/fields";
+                                      
+
+     fetch(url, {  //provide URL of the processing page
+              method: "POST",
+
+              headers: {
+                  "Content-Type": "application/json"
+              },
+              body: {
+                  "assetType":"fields",
+
+              },
+              dataType : "json"
+          })
+       .then(response => response.text())
+.then(data => {
+});
 
  
 
