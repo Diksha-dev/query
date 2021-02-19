@@ -10,6 +10,8 @@ const xmlParser = require('xml2json');
 var xml;
 var jsonRes;
 var SourceListDEResult;
+var xml2js = require('xml2js');
+var xml2jsParser = new xml2js.Parser();
 
 // use the express-static middleware
 app.use(express.static("marketing-cloud-query-app"));
