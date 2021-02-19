@@ -44,16 +44,16 @@
     document.getElementById("deArray").innerHTML = res[i] ;
 
    } */
-   function listItem(item){
-    for (var i = 0; i < item.res.length; i++){
-      var list = item.res[i];
-      
-      list = document.createElement('li');
-      document.getElementById('deArray').appendChild(list);
-      
-      console.log(list);
-    }  
-   }
+
+   var str = '<ul>'
+
+    res.forEach(function(slide) {
+      str += '<li>'+ slide + '</li>';
+    }); 
+    
+    str += '</ul>';
+    document.getElementById("deArray").innerHTML = str;
+    <div id="slideContainer"></div>
    
 
     
