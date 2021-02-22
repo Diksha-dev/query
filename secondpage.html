@@ -52,6 +52,7 @@
                          checkbox.setAttribute("id",slide);
                          checkbox.setAttribute("value",slide);
                           checkbox.setAttribute("name",slide);
+                          
            // document.getElementById("check").innerHTML = checkbox ;
             var node = document.createElement("LI");                 // Create a <li> node
          //   var textnode = document.createTextNode(slide);         // Create a text node
@@ -61,6 +62,8 @@
              var labelId = 'label'+slide ; 
              console.log ("labelId"  + labelId)
              label.setAttribute("id","demoId");
+             label.innerHTML = slide;
+             document.getElementById("check").appendChild(label);;
              
             
             node.appendChild(checkbox);
