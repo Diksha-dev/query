@@ -58,12 +58,14 @@
 
              var label=document.createElement('label');
              label.setAttribute("for",slide);
-             label.setAttribute("id",'label'+slide)
+             var labelId = 'label'+slide ; 
+             console.log ("labelId"  + labelId)
+             label.setAttribute("id",labelId);
              
  
             node.appendChild(checkbox);
             node.appendChild(label); 
-             document.getElementById('label'+slide  + '').appendChild(slide);                             // Append the text to <li>
+             document.getElementById(labelId ).appendChild(slide);                             // Append the text to <li>
             document.getElementById("check").appendChild(node);
         //    document.getElementById("check").appendChild(slide);
         //    document.getElementById("check").iannerHTML = checkbox ;
