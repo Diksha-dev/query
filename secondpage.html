@@ -48,7 +48,7 @@
 
               var checkbox = document.createElement('input');
                          checkbox.setAttribute("type","checkbox");
-                          checkbox.setAttribute("onclick","handleClick()");
+                          checkbox.addEventListener('click',handleClick)
                                 
                          checkbox.setAttribute("id",slide);
            // document.getElementById("check").innerHTML = checkbox ;
