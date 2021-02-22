@@ -43,14 +43,36 @@
 
         var str = '<ul>'
 
-            dataextensionArray.forEach(function(slide) {
-              str += '<input type="checkbox" id = "checkbox" onclick=' + "handleClick()" + '>'+ slide  + '<br />';
+            
+            
+            str += '</ul>';
+
+            
+        //    var button = document.createElement("button");
+        //    button.innerHTML = str;
+        //    document.getElementById("Data Extensions").innerHTML = str;
+
+        //    function handleClick() {
+        //     console.log("Clicked, new value = ");
+        //    }
+        //    document.getElementById('check').onchange = function() {
+        //    var checkboxes = document.getElementsByName('checkbox');
+        //    for (var checkbox of checkboxes) {
+        //        if (checkbox.checked)
+        //        document.body.append(checkbox.value + ' ');
+        //    }
+        //    }
+      
+     }
+
+     dataextensionArray.forEach(function(slide) {
+        //      str += '<input type="checkbox" id = "checkbox" onclick=' + "handleClick()" + '>'+ slide  + '<br />';
 
               var checkbox = document.createElement('input');
-                         checkbox.setAttribute("type","checkbox");
+                          checkbox.setAttribute("type","checkbox");
                           checkbox.addEventListener('click',handleClick)       
-                         checkbox.setAttribute("id",slide);
-                         checkbox.setAttribute("value",slide);
+                          checkbox.setAttribute("id",slide);
+                          checkbox.setAttribute("value",slide);
                           checkbox.setAttribute("name",slide);
                           
            // document.getElementById("check").innerHTML = checkbox ;
@@ -63,38 +85,19 @@
              console.log ("labelId"  + labelId)
              label.setAttribute("id","demoId");
              label.innerHTML = slide;
-             document.getElementById("check").appendChild(label);;
+             document.getElementById("Data Extensions").appendChild(label);
+         //    document.getElementById("check").appendChild(label);
              
             
             node.appendChild(checkbox);
             node.appendChild(label); 
          //    document.getElementById("demoId" ).appendChild(slide);                             // Append the text to <li>
-            document.getElementById("check").appendChild(node);
+             document.getElementById("Data Extensions").appendChild(node);
         //    document.getElementById("check").appendChild(slide);
         //    document.getElementById("check").iannerHTML = checkbox ;
         //    console.log(checkbox.id); 
             
             }); 
-            
-            str += '</ul>';
-
-            
-        //    var button = document.createElement("button");
-        //    button.innerHTML = str;
-            document.getElementById("Data Extensions").innerHTML = str;
-
-            function handleClick() {
-             console.log("Clicked, new value = ");
-            }
-            document.getElementById('check').onchange = function() {
-            var checkboxes = document.getElementsByName('checkbox');
-            for (var checkbox of checkboxes) {
-                if (checkbox.checked)
-                document.body.append(checkbox.value + ' ');
-            }
-            }
-      
-     }
 
      var url="/fields";
                                       
