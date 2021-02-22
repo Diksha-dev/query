@@ -126,13 +126,26 @@ app.post("/secondpage", async function (req, res) {
        
       SourceDEFieldsResult = response.body;
 
-      xml2jsParser.parseString(SourceDEFieldsResult, function (err, result) {
-        //console.log('mera result : ' + JSON.stringify(result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results']));
-        SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
-      });
-      console.log("yeh hai all fields result" + SourceDEFieldsResult);
-    //     resCall.json({targetDEArray : targetDEArray});
-      });
+        xml2jsParser.parseString(SourceDEFieldsResult, function (err, result) {
+          //console.log('mera result : ' + JSON.stringify(result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results']));
+          SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
+        });
+
+        for (var key in SourceDEFieldsResult) {
+          
+            DEListMap[SourceDEFieldsResult[key].DataExtension.CustomerKey]] = {
+              "FieldName": SourceDEFieldsResult[key].Name,
+              "FieldIsRequired": SourceDEFieldsResult[key].IsRequired,
+              "FieldIsPrimaryKey": SourceDEFieldsResult[key].IsPrimaryKey,
+              "FieldFieldType": SourceDEFieldsResult[key].FieldType,
+              "FieldMaxLength": SourceDEFieldsResult[key].MaxLength,
+              "FieldScale": SourceDEFieldsResult[key].Scale,
+              "FieldDefaultValue": SourceDEFieldsResult[key].DefaultValue
+            };
+          
+        }
+
+        console.log("DEListMap" + DEListMap) ; 
 
 
 
