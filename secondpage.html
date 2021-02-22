@@ -69,11 +69,11 @@
         //      str += '<input type="checkbox" id = "checkbox" onclick=' + "handleClick()" + '>'+ slide  + '<br />';
         console.log("yeh for loop ki slide hai" + dataextensionArray);
               var checkbox = document.createElement('input');
-                          checkbox.setAttribute("type","checkbox");
-                          checkbox.addEventListener('click',handleClick)       
+                          checkbox.setAttribute("type","checkbox"); 
                           checkbox.setAttribute("id",slide);
                           checkbox.setAttribute("value",slide);
                           checkbox.setAttribute("name",slide);
+                          checkbox.addEventListener('click',handleClick)    
                           
            // document.getElementById("check").innerHTML = checkbox ;
             var node = document.createElement("LI");                 // Create a <li> node
@@ -81,8 +81,8 @@
 
              var label=document.createElement('label');
              label.setAttribute("for",slide);
-        //     var labelId = 'label'+slide ; 
-        //     console.log ("labelId"  + labelId) ; 
+        //   var labelId = 'label'+slide ; 
+        //   console.log ("labelId"  + labelId) ; 
              label.setAttribute("id",slide);
              label.innerHTML = slide;
              document.getElementById("Data Extensions").appendChild(label);
@@ -98,6 +98,10 @@
         //    console.log(checkbox.id); 
             
             }); 
+            function handleClick()
+            {
+                console.log()
+            }
 
      var url="/fields";
                                       
