@@ -83,7 +83,7 @@
              label.setAttribute("for",slide);
              var labelId = 'label'+slide ; 
              console.log ("labelId"  + labelId)
-             label.setAttribute("id","demoId");
+             label.setAttribute("id","label"+ slide);
              label.innerHTML = slide;
              document.getElementById("Data Extensions").appendChild(label);
          //    document.getElementById("check").appendChild(label);
@@ -92,7 +92,7 @@
             node.appendChild(checkbox);
             node.appendChild(label); 
          //    document.getElementById("demoId" ).appendChild(slide);                             // Append the text to <li>
-             document.getElementById("Data Extensions").appendChild(node);
+            document.getElementById("Data Extensions").appendChild(node);
         //    document.getElementById("check").appendChild(slide);
         //    document.getElementById("check").iannerHTML = checkbox ;
         //    console.log(checkbox.id); 
