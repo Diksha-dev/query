@@ -50,8 +50,15 @@
                          checkbox.setAttribute("type","checkbox");
                                 
                          checkbox.setAttribute("id",slide);
-            document.getElementById("check").innerHTML = checkbox ;
-            console.log(checkbox.id); 
+           // document.getElementById("check").innerHTML = checkbox ;
+            var node = document.createElement("LI");                 // Create a <li> node
+         //   var textnode = document.createTextNode(slide);         // Create a text node
+            node.appendChild(checkbox);                              // Append the text to <li>
+            document.getElementById("check").appendChild(node);
+            
+        //    document.getElementById("check").iannerHTML = checkbox ;
+        //    console.log(checkbox.id); 
+            
             }); 
             
             str += '</ul>';
