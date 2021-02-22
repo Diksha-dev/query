@@ -44,7 +44,7 @@
         var str = '<ul>'
 
             dataextensionArray.forEach(function(slide) {
-              str += '<input type="checkbox" id = "checkbox" onclick="handleClick(this)">'+ slide  + '<br />';
+              str += '<input type="checkbox" id = "checkbox" onclick="handleClick()">'+ slide  + '<br />';
             }); 
             
             str += '</ul>';
@@ -52,8 +52,8 @@
         //    button.innerHTML = str;
             document.getElementById("Data Extensions").innerHTML = str;
 
-            function handleClick(cb) {
-             display("Clicked, new value = " + cb.checked);
+            function handleClick() {
+             console.log("Clicked, new value = ");
             }
             document.getElementById('check').onchange = function() {
             var checkboxes = document.getElementsByName('checkbox');
