@@ -48,7 +48,9 @@
             }); 
             
             str += '</ul>';
-            document.getElementById("Data Extensions").innerHTML = str;
+            var button = document.createElement("button");
+            button.innerHTML = str;
+            document.getElementById("Data Extensions").innerHTML = button;
 
             document.getElementById('check').onchange = function() {
             var checkboxes = document.getElementsByName('checkbox');
