@@ -62,11 +62,11 @@
              console.log ("labelId"  + labelId)
              label.setAttribute("id",labelId);
              
- 
+            document.getElementById("check").appendChild(node);
             node.appendChild(checkbox);
             node.appendChild(label); 
              document.getElementById(labelId ).appendChild(slide);                             // Append the text to <li>
-            document.getElementById("check").appendChild(node);
+          
         //    document.getElementById("check").appendChild(slide);
         //    document.getElementById("check").iannerHTML = checkbox ;
         //    console.log(checkbox.id); 
