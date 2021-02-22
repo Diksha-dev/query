@@ -50,17 +50,18 @@
                          checkbox.setAttribute("type","checkbox");
                           checkbox.addEventListener('click',handleClick)       
                          checkbox.setAttribute("id",slide);
+                         checkbox.setAttribute("value",slide);
            // document.getElementById("check").innerHTML = checkbox ;
             var node = document.createElement("LI");                 // Create a <li> node
          //   var textnode = document.createTextNode(slide);         // Create a text node
 
-             var label=document.createElement('label');
-             label.setAttribute("for",slide);
-                                label.setAttribute("id",'label'+slide)
+            // var label=document.createElement('label');
+            // label.setAttribute("for",slide);
+            //                    label.setAttribute("id",'label'+slide)
                             //   document.getElementById("check").appendChild(label);
 
             node.appendChild(checkbox);
-            node.appendChild(label);                              // Append the text to <li>
+        //    node.appendChild(label);                              // Append the text to <li>
             document.getElementById("check").appendChild(node);
             
         //    document.getElementById("check").iannerHTML = checkbox ;
