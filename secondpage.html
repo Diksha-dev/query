@@ -59,10 +59,11 @@
              var label=document.createElement('label');
              label.setAttribute("for",slide);
              label.setAttribute("id",'label'+slide)
-             document.getElementById('label'+slide).appendChild(slide);
-
+             
+ 
             node.appendChild(checkbox);
-        //    node.appendChild(label);                              // Append the text to <li>
+            node.appendChild(label); 
+             document.getElementById('label'+slide).appendChild(slide);                             // Append the text to <li>
             document.getElementById("check").appendChild(node);
         //    document.getElementById("check").appendChild(slide);
         //    document.getElementById("check").iannerHTML = checkbox ;
