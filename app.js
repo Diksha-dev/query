@@ -131,9 +131,9 @@ app.post("/secondpage", async function (req, res) {
           SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
         });
 
-        for (var key in SourceDEFieldsResult) {
+    /*    for (var key in SourceDEFieldsResult) {
           
-           DEListMap[SourceDEFieldsResult[key]] = {
+           DEListMap[SourceDEFieldsResult[key].DataExtension.CustomerKey] = {
               "FieldName": SourceDEFieldsResult[key].Name,
               "FieldIsRequired": SourceDEFieldsResult[key].IsRequired,
               "FieldIsPrimaryKey": SourceDEFieldsResult[key].IsPrimaryKey,
@@ -146,7 +146,7 @@ app.post("/secondpage", async function (req, res) {
         }
 
         console.log("DEListMap" + DEListMap) ; 
-
+    */
 
 
 
