@@ -133,7 +133,7 @@ app.post("/secondpage", async function (req, res) {
 
         for (var key in SourceDEFieldsResult) {
           
-            DEListMap[SourceDEFieldsResult[key].DataExtension.CustomerKey] = {
+           DEListMap[SourceDEFieldsResult[key].DataExtension.CustomerKey] = {
               "FieldName": SourceDEFieldsResult[key].Name,
               "FieldIsRequired": SourceDEFieldsResult[key].IsRequired,
               "FieldIsPrimaryKey": SourceDEFieldsResult[key].IsPrimaryKey,
