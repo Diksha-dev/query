@@ -232,8 +232,8 @@ async function getacesstoken(ClientIdDestination,ClientSecretDestination,GrantTy
           .then( (response) => 
             { 
               var result = response.data; 
-              // console.log("Result"+result.access_token);
-              // console.log('Processing acess token'); 
+              console.log("Result"+result.access_token);
+              console.log('Processing acess token'); 
               resolve(result.access_token); 
             }, 
           (error) => 
