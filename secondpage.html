@@ -161,7 +161,7 @@
       console.log(parsedData1[i]);
       deArray1.push(parsedData1[i]);
       console.log("deArray " + JSON.stringify(deArray1));
-     // document.getElementById("deArray1").innerHTML = "/n" +  parsedData1[i]  + "/n" ;
+     document.getElementById("Fields").innerHTML = "/n" +  parsedData1[i]  + "/n" ;
    } 
       alert(typeof deArray1);
       var res1 = deArray1.toString().split(',');
@@ -236,10 +236,12 @@
                                                 
                                         </div>
                                     </div> 
-                                    <div id ="check">
-                                        Checked data 
-
-                                    </div>
+                                    <div class="slds-scrollable"  style="height:54rem;width:24rem" >
+                                 
+                                        <div class="slds-text-longform" id= "Fields" style="width:150%"> 
+                                               
+                                       </div>
+                                   </div> 
                                
                                  
                              </ul>
