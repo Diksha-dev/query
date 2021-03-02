@@ -135,8 +135,8 @@ app.post("/secondpage", async function (req, res) {
         });
 
        for (var key in SourceDEFieldsResult) {
-          
-           DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
+          if('MaxLength' in SourceDEFieldsResult[key]) {
+            DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
               "FieldName": SourceDEFieldsResult[key].Name[0],
               "FieldIsRequired": SourceDEFieldsResult[key].IsRequired[0],
               "FieldIsPrimaryKey": SourceDEFieldsResult[key].IsPrimaryKey[0],
@@ -145,6 +145,19 @@ app.post("/secondpage", async function (req, res) {
               "FieldScale": SourceDEFieldsResult[key].Scale[0],
               "FieldDefaultValue": SourceDEFieldsResult[key].DefaultValue[0]
             };
+          }
+          else {
+            DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
+              "FieldName": SourceDEFieldsResult[key].Name[0],
+              "FieldIsRequired": SourceDEFieldsResult[key].IsRequired[0],
+              "FieldIsPrimaryKey": SourceDEFieldsResult[key].IsPrimaryKey[0],
+              "FieldFieldType": SourceDEFieldsResult[key].FieldType[0],
+              "FieldMaxLength": "",
+              "FieldScale": SourceDEFieldsResult[key].Scale[0],
+              "FieldDefaultValue": SourceDEFieldsResult[key].DefaultValue[0]
+            };
+          }
+           
           
         }
 
