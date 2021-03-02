@@ -148,7 +148,7 @@ app.post("/secondpage", async function (req, res) {
           
         }
 
-        console.log("DEListMap" + DEListMap) ; 
+        console.log("DEListMap" + JSON.stringify(DEListMap)) ; 
     
 
 
