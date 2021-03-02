@@ -147,20 +147,20 @@
           })
        .then(response => response.text())
 .then(data => {
-    var parsedData = JSON.parse(data).DEListMap;
+    var parsedData1 = JSON.parse(data).DEListMap;
   //  console.log("parsed data  : " + JSON.stringify(parsedData1) );
    
 });
 
  
 
- var deArray = []
- for ( i in parsedData ) 
+ var deArray1 = []
+ for ( i in parsedData1 ) 
    {
     // console.log(i);
-      console.log(parsedData[i]);
-      deArray.push(parsedData[i]);
-      console.log("deArray " + deArray );
+      console.log(parsedData1[i]);
+      deArray1.push(parsedData1[i]);
+      console.log("deArray " + deArray1 );
   //    document.getElementById("deArray").innerHTML = "/n" +  parsedData[i]  + "/n" ;
    } 
   // alert(typeof deArray);
