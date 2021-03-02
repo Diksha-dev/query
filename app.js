@@ -135,7 +135,7 @@ app.post("/secondpage", async function (req, res) {
         });
 
        for (var key in SourceDEFieldsResult) {
-          if('MaxLength' in SourceDEFieldsResult[key] || 'Scale' in SourceDEFieldsResult[key] ) {
+          if('MaxLength' in SourceDEFieldsResult[key] && 'Scale' in SourceDEFieldsResult[key] ) {
             DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
               "FieldName": SourceDEFieldsResult[key].Name[0],
               "FieldIsRequired": SourceDEFieldsResult[key].IsRequired[0],
