@@ -136,14 +136,14 @@ app.post("/secondpage", async function (req, res) {
 
        for (var key in SourceDEFieldsResult) {
           
-           DEListMap[SourceDEFieldsResult[key].DataExtension.CustomerKey] = {
-              "FieldName": SourceDEFieldsResult[key].Name,
-              "FieldIsRequired": SourceDEFieldsResult[key].IsRequired,
-              "FieldIsPrimaryKey": SourceDEFieldsResult[key].IsPrimaryKey,
-              "FieldFieldType": SourceDEFieldsResult[key].FieldType,
-              "FieldMaxLength": SourceDEFieldsResult[key].MaxLength,
-              "FieldScale": SourceDEFieldsResult[key].Scale,
-              "FieldDefaultValue": SourceDEFieldsResult[key].DefaultValue
+           DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
+              "FieldName": SourceDEFieldsResult[key].Name[0],
+              "FieldIsRequired": SourceDEFieldsResult[key].IsRequired[0],
+              "FieldIsPrimaryKey": SourceDEFieldsResult[key].IsPrimaryKey[0],
+              "FieldFieldType": SourceDEFieldsResult[key].FieldType[0],
+              "FieldMaxLength": SourceDEFieldsResult[key].MaxLength[0],
+              "FieldScale": SourceDEFieldsResult[key].Scale[0],
+              "FieldDefaultValue": SourceDEFieldsResult[key].DefaultValue[0]
             };
           
         }
