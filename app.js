@@ -163,7 +163,7 @@ app.post("/secondpage", async function (req, res) {
 
         console.log("DEListMap" + JSON.stringify(DEListMap)) ; 
     
-
+        resCall.json({DEListMap : DEListMap});
 
 
    });
