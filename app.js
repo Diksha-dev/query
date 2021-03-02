@@ -12,7 +12,7 @@ var jsonRes;
 var SourceListDEResult;
 var xml2js = require('xml2js');
 var xml2jsParser = new xml2js.Parser();
-var DEListMap;
+var DEListMap={};
 
 // use the express-static middleware
 app.use(express.static("marketing-cloud-query-app"));
@@ -131,7 +131,7 @@ app.post("/secondpage", async function (req, res) {
         xml2jsParser.parseString(SourceDEFieldsResult, function (err, result) {
         // console.log('mera result : ' + JSON.stringify(result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results']));
           SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
-          console.log('my new result '+SourceDEFieldsResult)
+         // console.log('my new result '+SourceDEFieldsResult)
         });
 
        for (var key in SourceDEFieldsResult) {
