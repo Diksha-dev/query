@@ -137,7 +137,7 @@ app.post("/secondpage", async function (req, res) {
        for (var key in SourceDEFieldsResult) {
         DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
           "FieldName": SourceDEFieldsResult[key].Name[0],
-          "CustomerKey":SourceDEFieldsResult[key].CustomerKey[0]
+          "CustomerKey":SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]
         };
         
         
