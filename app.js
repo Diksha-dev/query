@@ -12,6 +12,7 @@ var jsonRes;
 var SourceListDEResult;
 var xml2js = require('xml2js');
 var xml2jsParser = new xml2js.Parser();
+var DEListMap;
 
 // use the express-static middleware
 app.use(express.static("marketing-cloud-query-app"));
