@@ -147,7 +147,9 @@
           })
        .then(response => response.text())
 .then(data => {
-console.log(data);
+    console.log(data);
+    var parsedData1 = JSON.parse(data).targetDEArray;
+    console.log("parsed data  : " + JSON.stringify(parsedData1) );
 });
 
  
