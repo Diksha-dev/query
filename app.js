@@ -128,12 +128,11 @@ app.post("/secondpage", async function (req, res) {
      
 
         xml2jsParser.parseString(SourceDEFieldsResult, function (err, result) {
-          console.log('mera new result'+ result);
          console.log('mera result : ' + JSON.stringify(result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results']));
           SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
         });
 
-    /*    for (var key in SourceDEFieldsResult) {
+       for (var key in SourceDEFieldsResult) {
           
            DEListMap[SourceDEFieldsResult[key].DataExtension.CustomerKey] = {
               "FieldName": SourceDEFieldsResult[key].Name,
@@ -148,7 +147,7 @@ app.post("/secondpage", async function (req, res) {
         }
 
         console.log("DEListMap" + DEListMap) ; 
-    */
+    
 
 
 
