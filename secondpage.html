@@ -147,7 +147,7 @@
           })
        .then(response => response.text())
 .then(data => {
-    var parsedData1 = JSON.parse(data).DEListMap;
+    var parsedData = JSON.parse(data).DEListMap;
   //  console.log("parsed data  : " + JSON.stringify(parsedData1) );
    
 });
@@ -155,7 +155,7 @@
  
 
  var deArray = []
- for ( i in parsedData ) 
+ for ( i in parsedData1 ) 
    {
     // console.log(i);
       console.log(parsedData[i]);
