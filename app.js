@@ -125,9 +125,10 @@ app.post("/secondpage", async function (req, res) {
       if (error) throw new Error(error);
        
       SourceDEFieldsResult = response.body;
-      console.log('mera result'+ SourceDEFieldsResult);
+     
 
         xml2jsParser.parseString(SourceDEFieldsResult, function (err, result) {
+          console.log('mera result'+ SourceDEFieldsResult);
         //  console.log('mera result : ' + JSON.stringify(result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results']));
           SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
         });
