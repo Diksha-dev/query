@@ -133,7 +133,6 @@ app.post("/secondpage", async function (req, res) {
           SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
          // console.log('my new result '+SourceDEFieldsResult)
         });
-
        for (var key in SourceDEFieldsResult) {
         DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
           "FieldName": SourceDEFieldsResult[key].Name[0],
