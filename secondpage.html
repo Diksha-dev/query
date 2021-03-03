@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.13.7/styles/salesforce-lightning-design-system_touch.min.css" integrity="sha512-5j2QXzkr/ZIuvsLKYgRr8HEfAx5D+Mg0dFDCSGwKR2GKcdZbJSynKdirYGVGRVWLz9ryxV4/0kfoCGffJD3fQw==" crossorigin="anonymous" />
     
     <script>
-        var deArray1 = []
+        var deArray1 = [];
+        var fieldList=[];
         var url="/asset";
                                       
 
@@ -97,7 +98,7 @@
             
             }; 
             function handleClick()
-            {
+            {    fieldList=[];
             //    console.log("Button clicked" + checkbox.name);
                 var frameQuery = document.getElementById('Data Extensions');
    
@@ -128,8 +129,8 @@
       for (var i = 0; i < checkedEmailArray.length; i++){
         for (var j = 0; j <deArray1.length; j++){
             if(checkedEmailArray[i]==deArray1[j].CustomerKey)
-            console.log("Avi1 "+JSON.stringify(deArray1[j].FieldName));
-            console.log("Avi2 "+deArray1[j].FieldName);
+            console.log("fields "+deArray1[j].FieldName);
+            fieldList.push(deArray1[j].FieldName);
         }
       }
 
