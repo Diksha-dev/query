@@ -13,6 +13,7 @@ var SourceListDEResult;
 var xml2js = require('xml2js');
 var xml2jsParser = new xml2js.Parser();
 var DEListMap={};
+var favorites = [];
 
 // use the express-static middleware
 app.use(express.static("marketing-cloud-query-app"));
@@ -131,13 +132,14 @@ app.post("/secondpage", async function (req, res) {
         xml2jsParser.parseString(SourceDEFieldsResult, function (err, result) {
         // console.log('mera result : ' + JSON.stringify(result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results']));
           SourceDEFieldsResult = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
-         console.log('my new result '+JSON.stringify(SourceDEFieldsResult));
+        // console.log('my new result '+JSON.stringify(SourceDEFieldsResult));
         });
        for (var key in SourceDEFieldsResult) {
         DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
           "FieldName": SourceDEFieldsResult[key].Name[0],
           "CustomerKey":SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]
         };
+        favorites.push(DEListMap);
         
         
         
@@ -167,7 +169,7 @@ app.post("/secondpage", async function (req, res) {
           
         }
 
-       // console.log("DEListMap" + JSON.stringify(DEListMap)) ; 
+       console.log("DEListMap" + JSON.stringify(favorites)) ; 
     
         resCall.json({DEListMap : DEListMap});
 
