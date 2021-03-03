@@ -127,12 +127,11 @@
           }
       }; 
       for (var i = 0; i < checkedEmailArray.length; i++){
-        console.log("Countloop "+i);
         for (var j = 0; j < deArray1.length; j++){
             if(checkedEmailArray[i]==deArray1[j].CustomerKey){
             console.log("fields "+deArray1[j].FieldName);
-            console.log("Count "+i);
-            console.log("Count "+j);
+            console.log("Count "+checkedEmailArray.length);
+            console.log("Count "+deArray1.length);
           //  fieldList.push(deArray1[j].FieldName);
             }
         }
