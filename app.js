@@ -135,10 +135,11 @@ app.post("/secondpage", async function (req, res) {
         // console.log('my new result '+JSON.stringify(SourceDEFieldsResult));
         });
        for (var key in SourceDEFieldsResult) {
-        DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
+       // DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
+        DEListMap= {
           "FieldName": SourceDEFieldsResult[key].Name[0],
           "CustomerKey":SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]
-        };
+       };
         favorites.push(DEListMap);
         
         
