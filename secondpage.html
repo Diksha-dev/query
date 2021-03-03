@@ -128,8 +128,7 @@
       }; 
       for (var i = 0; i < checkedEmailArray.length; i++){
         for (var j = 0; j < deArray1.length; j++){
-            if(checkedEmailArray[i]==deArray1[j].CustomerKey){
-            console.log("fields "+ deArray1[j].FieldName);
+            if(checkedEmailArray[i]==deArray1[j].CustomerKey  && checkboxes[i].checked == true){
             fieldList.push(deArray1[j].FieldName);
             }
         }
@@ -184,8 +183,8 @@
    { 
     //console.log(i);
   // console.log("response "+JSON.stringify(deArray1[i]));
-  console.log("response1 "+deArray1[i].FieldName);
-   console.log("response2 "+JSON.stringify(deArray1[i].FieldName));
+    //console.log("response1 "+deArray1[i].FieldName);
+   //console.log("response2 "+JSON.stringify(deArray1[i].FieldName));
    //document.getElementById("Fields").innerHTML = JSON.stringify(deArray1[i].FieldName);
 
    } 
