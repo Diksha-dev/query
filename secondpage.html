@@ -28,7 +28,7 @@
    var parsedData = JSON.parse(data).targetDEArray;
    console.log("parsed data  : " + JSON.stringify(parsedData) );
  
- var dataextensionArray = []; 
+ /*var dataextensionArray = []; 
  for (const [keyimage, value] of Object.entries(parsedData)) 
  {
      //  console.log("yeh key hai : " + keyimage);
@@ -59,16 +59,17 @@
         //    }
         //    }
       
-     }
+     }*/
 
-     dataextensionArray.forEach(function(slide) {
+     //dataextensionArray.forEach(function(slide) {
+        for (const [keyimage, value] of Object.entries(parsedData)){
         //      str += '<input type="checkbox" id = "checkbox" onclick=' + "handleClick()" + '>'+ slide  + '<br />';
        // console.log("yeh for loop ki slide hai" + dataextensionArray);
               var checkbox = document.createElement('input');
                           checkbox.setAttribute("type","checkbox"); 
-                          checkbox.setAttribute("id",slide);
-                          checkbox.setAttribute("value",slide);
-                          checkbox.setAttribute("name",slide);
+                          checkbox.setAttribute("id",keyimage);
+                          checkbox.setAttribute("value",value);
+                          checkbox.setAttribute("name",value);
                           checkbox.addEventListener('click',handleClick)    
                           
            // document.getElementById("check").innerHTML = checkbox ;
@@ -76,11 +77,11 @@
          //   var textnode = document.createTextNode(slide);         // Create a text node
 
              var label=document.createElement('label');
-             label.setAttribute("for",slide);
+             label.setAttribute("for",value);
         //   var labelId = 'label'+slide ; 
         //   console.log ("labelId"  + labelId) ; 
-             label.setAttribute("id",slide);
-             label.innerHTML = slide;
+             label.setAttribute("id",keyimage);
+             label.innerHTML = value;
              document.getElementById("Data Extensions").appendChild(label);
          //    document.getElementById("check").appendChild(label);
              
@@ -93,7 +94,7 @@
         //    document.getElementById("check").iannerHTML = checkbox ;
         //    console.log(checkbox.id); 
             
-            }); 
+            }; 
             function handleClick()
             {
             //    console.log("Button clicked" + checkbox.name);
