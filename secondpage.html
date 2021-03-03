@@ -31,11 +31,12 @@
  var dataextensionArray = []; 
  for (const [keyimage, value] of Object.entries(parsedData)) 
  {
-       console.log("yeh key hai : " + keyimage);
+     //  console.log("yeh key hai : " + keyimage);
         
-       console.log("yeh value hai : " + value);
+     //  console.log("yeh value hai : " + value);
     //    document.getElementById("Data Extensions").innerHTML = value ;
         dataextensionArray.push(value); 
+        dataextensionArray.push(keyimage);
 
         var str = '<ul>'
 
