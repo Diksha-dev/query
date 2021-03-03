@@ -35,7 +35,7 @@
         
      //  console.log("yeh value hai : " + value);
     //    document.getElementById("Data Extensions").innerHTML = value ;
-        dataextensionArray.push(value,keyimage); 
+        dataextensionArray.push(value); 
 
         var str = '<ul>'
 
@@ -63,7 +63,7 @@
 
      dataextensionArray.forEach(function(slide) {
         //      str += '<input type="checkbox" id = "checkbox" onclick=' + "handleClick()" + '>'+ slide  + '<br />';
-        console.log("yeh for loop ki slide hai" + dataextensionArray);
+       // console.log("yeh for loop ki slide hai" + dataextensionArray);
               var checkbox = document.createElement('input');
                           checkbox.setAttribute("type","checkbox"); 
                           checkbox.setAttribute("id",slide);
