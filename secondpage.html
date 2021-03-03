@@ -9,7 +9,6 @@
     <script>
         var deArray1 = [];
         var fieldList=[];
-        var checkedEmailArray = [];
         var url="/asset";
                                       
 
@@ -106,7 +105,7 @@
                 var checkboxes = frameQuery.getElementsByTagName('input');
 
            //     console.log(checkboxes) ; 
-   
+    var checkedEmailArray = [];
     for (var i = 0; i < checkboxes.length; i++)
       {
         if( checkboxes[i].checked == true)
