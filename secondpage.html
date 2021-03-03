@@ -130,7 +130,7 @@
         for (var j = 0; j < deArray1.length; j++){
             if(checkedEmailArray[i]==deArray1[j].CustomerKey){
             fieldList.push(deArray1[j].FieldName);
-            document.getElementById("Fields").innerHTML = deArray1[j].FieldName;
+            document.getElementById("Fields").innerHTML += deArray1[j].FieldName;
             }
         }
       }
@@ -252,6 +252,9 @@
                                                 
                                         </div>
                                     </div> 
+                                    <div class="slds-panel__header">
+                                        <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Data Extensions< Fields</h2>
+                                       </div>
                                     <div class="slds-scrollable"  style="height:54rem;width:24rem" >
                                  
                                         <div class="slds-text-longform" id= "Fields" style="width:150%"> 
