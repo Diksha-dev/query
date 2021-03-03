@@ -9,6 +9,7 @@
     <script>
         var deArray1 = [];
         var fieldList=[];
+        var checkedEmailArray = [];
         var url="/asset";
                                       
 
@@ -105,7 +106,7 @@
                 var checkboxes = frameQuery.getElementsByTagName('input');
 
            //     console.log(checkboxes) ; 
-    var checkedEmailArray = [];
+   
     for (var i = 0; i < checkboxes.length; i++)
       {
         if( checkboxes[i].checked == true)
@@ -128,7 +129,7 @@
       }; 
       for (var i = 0; i < checkedEmailArray.length; i++){
         for (var j = 0; j < deArray1.length; j++){
-            if(checkedEmailArray[i]===deArray1[j].CustomerKey){
+            if(checkedEmailArray[i]==deArray1[j].CustomerKey){
             console.log("fields "+ deArray1[j].FieldName);
             fieldList.push(deArray1[j].FieldName);
             }
