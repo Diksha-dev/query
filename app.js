@@ -171,7 +171,7 @@ app.post("/secondpage", async function (req, res) {
 
        console.log("DEListMap" + JSON.stringify(favorites)) ; 
     
-        resCall.json({DEListMap : DEListMap});
+        resCall.json({favorites : favorites});
 
 
    });
