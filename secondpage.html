@@ -130,10 +130,12 @@
         for (var j = 0; j < deArray1.length; j++){
             if(checkedEmailArray[i]==deArray1[j].CustomerKey){
             fieldList.push(deArray1[j].FieldName);
+            document.getElementById("Fields").innerHTML = deArray1[j].FieldName;
             }
         }
       }
       console.log("fields "+ fieldList);
+      
 
 
 
