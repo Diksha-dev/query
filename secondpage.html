@@ -98,8 +98,9 @@
         //    console.log(checkbox.id); 
             
             }; 
-            function handleClick()
-            {    fieldList=[];
+            function handleClick() {   
+                document.getElementById("Fields").innerHTML="";
+                fieldList=[];
                 result={};
             //    console.log("Button clicked" + checkbox.name);
                 var frameQuery = document.getElementById('Data Extensions');
@@ -143,7 +144,6 @@
             //console.log("new2 "+rec.fieldName);
 
         }
-        document.getElementById("Fields").innerHTML="";
       //  document.getElementById("Header").innerHTML +=  value + "<br>";
 
 
