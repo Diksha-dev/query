@@ -137,9 +137,10 @@
             
             }
         }
+        document.getElementById("Fields").innerHTML="";
         for ( let rec of fieldList ){
-            console.log("new1 "+ JSON.stringify(rec.fieldName));
-            console.log("new2 "+rec.fieldName);
+            document.getElementById("Fields").innerHTML += rec.fieldName+ "<br>";
+            //console.log("new2 "+rec.fieldName);
 
         }
       //  document.getElementById("Header").innerHTML +=  value + "<br>";
