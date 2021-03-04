@@ -127,8 +127,6 @@
       for (const [key, value] of Object.entries(result)){
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
-           // fieldList.push(deArray1[i].FieldName);
-           //document.getElementById("Fields").innerHTML += deArray1[i].FieldName+ "<br>";
            var obj={
                "fieldName":deArray1[i].FieldName,
                "DeName":value
@@ -140,7 +138,7 @@
         }
        
         for ( let rec of fieldList ){
-            document.getElementById("Fields").innerHTML += rec.fieldName+ "<br>";
+            document.getElementById("Fields").innerHTML += rec.fieldName &nbsp+rec.fieldName+ "<br>";
             //console.log("new2 "+rec.fieldName);
 
         }
