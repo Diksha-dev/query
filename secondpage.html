@@ -126,16 +126,15 @@
         console.log(key + " = " + value);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
-            fieldList.push(deArray1[i].FieldName);
+           // fieldList.push(deArray1[i].FieldName);
+           document.getElementById("Fields").innerHTML += deArray1[i].FieldName+ "<br>";
             
             }
         }
 
 
       }
-      console.log("fields "+ fieldList);
-      console.log("fields "+ JSON.stringify(fieldList));
-
+    //  console.log("fields "+ fieldList);
 
 
 
