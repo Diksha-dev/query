@@ -100,7 +100,7 @@
             }; 
             function handleClick() {   
                 document.getElementById("Fields").innerHTML="";
-                document.getElementById("Header").innerHTML="";
+                //document.getElementById("Header").innerHTML="";
                 fieldList=[];
                 result={};
             //    console.log("Button clicked" + checkbox.name);
@@ -126,7 +126,7 @@
       }; 
 
       for (const [key, value] of Object.entries(result)){
-        document.getElementById("Header").innerHTML += value+ "<br>";
+        document.getElementById("Header").innerHTML = value+ "<br>";
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
           /* var obj={
