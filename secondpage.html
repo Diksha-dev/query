@@ -129,7 +129,7 @@
       for (const [key, value] of Object.entries(result)){
         var newdiv = document.createElement("div");
         newdiv.innerHTML =value;
-        document.getElementById("Header").appendChild(newdiv);
+        document.getElementById("Fields").appendChild(newdiv);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
           /* var obj={
@@ -291,7 +291,7 @@
                                                 
                                         </div>
                                     </div> 
-                                   <!---- <div class="slds-panel__header">
+                                    <div class="slds-panel__header">
                                         <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Data Extensions Fields</h2>
                                        </div>
                                     <div class="slds-scrollable"  style="height:54rem;width:24rem" >
@@ -299,13 +299,7 @@
                                         <div class="slds-text-longform" id= "Fields" style="width:150%"></div>
                                        
                                    </div>
-                                   ----> 
-                                   <div class=class="slds-scrollable"  style="height:54rem;width:24rem">
-                                    <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Data Extensions Fields</h2>
-                                   </div>
-                                   <div  class="slds-text-longform" style="width:150%">
-                                    <span class="slds-panel__header-title slds-text-heading_small slds-truncate" id= "Header"></span> <span class="slds-text-longform" id= "Fields"></span>
-                                   </div>
+                                  
                                
                                  
                              </ul>
