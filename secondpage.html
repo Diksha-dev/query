@@ -137,10 +137,11 @@
             
             }
         }
-        for (const item in fieldList) {
-            console.log("mynew "+item.fieldName);
-            console.log("mynew "+item.DeName);
-          }
+        for ( let rec of fieldList ){
+            console.log("new1 "+ JSON.stringify(rec.fieldName));
+            console.log("new2 "+rec.fieldName);
+
+        }
       //  document.getElementById("Header").innerHTML +=  value + "<br>";
 
 
