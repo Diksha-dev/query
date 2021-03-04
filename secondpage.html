@@ -116,7 +116,7 @@
             // console.log("yeh hai checkbox ki value name : " + checkboxes[i].name.name);
             // console.log("yeh hai checkbox ki value targetName : " + checkboxes[i].name.targetName);
             result[checkboxes[i].id]= checkboxes[i].name;
-            console.log("checknew "+JSON.stringify(result));
+          //  console.log("checknew "+JSON.stringify(result));
             checkedEmailArray.push(checkboxes[i].id);
 
           }
@@ -124,13 +124,22 @@
 
       for (const [key, value] of Object.entries(result)){
         console.log(key + " = " + value);
+        for (var i = 0; i < deArray1.length; i++){
+            if(key==deArray1[i].CustomerKey){
+            fieldList.push(deArray1[i].FieldName);
+            
+            }
+        }
 
 
       }
+      console.log("fields "+ fieldList);
+      console.log("fields "+ JSON.stringify(fieldList));
 
 
 
 
+    /*
      for (var i = 0; i < checkedEmailArray.length; i++){
         for (var j = 0; j < deArray1.length; j++){
             if(checkedEmailArray[i]==deArray1[j].CustomerKey){
@@ -144,6 +153,7 @@
       for (var i = 0; i < fieldList.length; i++){
       document.getElementById("Fields").innerHTML += fieldList[i]+ "<br>";
       }
+      */
       
 
 
