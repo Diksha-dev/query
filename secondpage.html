@@ -127,7 +127,9 @@
       }; 
 
       for (const [key, value] of Object.entries(result)){
-        document.getElementById("Header").innerHTML += value+ "<br>";
+        var newdiv = document.createElement("div");
+        newdiv.innerHTML =value;
+        document.getElementById("Fields").appendChild(newdiv);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
           /* var obj={
