@@ -137,16 +137,17 @@
             }
         }
        
-        for ( let rec of fieldList ){
-            document.getElementById("Fields").innerHTML += rec.fieldName+"     "+rec.DeName+ "<br>";
-            //console.log("new2 "+rec.fieldName);
-
-        }
-      //  document.getElementById("Header").innerHTML +=  value + "<br>";
 
 
       }
-      console.log("fields "+ JSON.stringify(fieldList));
+      
+      for ( let rec of fieldList ){
+        document.getElementById("Fields").innerHTML += rec.fieldName+"     "+rec.DeName+ "<br>";
+        //console.log("new2 "+rec.fieldName);
+
+    }
+     // document.getElementById("Header").innerHTML =  value + "<br>";
+     // console.log("fields "+ JSON.stringify(fieldList));
 
 
 
