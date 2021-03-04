@@ -117,19 +117,23 @@
             console.log("yeh hai checkbox ki value json : " + checkboxes[i].name);
             // console.log("yeh hai checkbox ki value name : " + checkboxes[i].name.name);
             // console.log("yeh hai checkbox ki value targetName : " + checkboxes[i].name.targetName);
-            result[checkboxes[i].id] = checkboxes[i].name;
+            result[checkboxes[i].id]+= checkboxes[i].name;
             console.log("checknew "+JSON.stringify(result));
             checkedEmailArray.push(checkboxes[i].id);
-          //  console.log("check "+checkedEmailArray);
-          //  var id=checkboxes[i].id;
-          //  var url=checkboxes[i].name;
-          //  emailjson[id]=checkboxes[i].name;
-          //  emailjsonarray.push(checkboxes[i].id);     
-          //  console.log(emailjsonarray) ;
 
           }
       }; 
-      for (var i = 0; i < checkedEmailArray.length; i++){
+
+      for (const [keyimage, value] of Object.entries(parsedData)){
+
+
+
+      }
+
+
+
+
+     /* for (var i = 0; i < checkedEmailArray.length; i++){
         for (var j = 0; j < deArray1.length; j++){
             if(checkedEmailArray[i]==deArray1[j].CustomerKey){
             fieldList.push(deArray1[j].FieldName);
@@ -142,6 +146,7 @@
       for (var i = 0; i < fieldList.length; i++){
       document.getElementById("Fields").innerHTML += fieldList[i]+ "<br>";
       }
+      */
 
 
 
