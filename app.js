@@ -138,7 +138,8 @@ app.post("/secondpage", async function (req, res) {
        // DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
         DEListMap= {
           "FieldName": SourceDEFieldsResult[key].Name[0],
-          "CustomerKey":SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]
+          "CustomerKey":SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0],
+          "DEName": SourceDEFieldsResult[key].DataExtension[0].Name[0]
        };
         favorites.push(DEListMap);
         
