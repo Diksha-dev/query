@@ -258,17 +258,18 @@
   function allowDrop(ev) {ev.preventDefault();}  
   function drag(event) {
     console.log("ev.target.id-----> " + event.target.id); 
-    console.log(event) ;
-    console.log(event.dataTransfer);
+//    console.log(event) ;
+   // console.log(event.dataTransfer);
   //  console.log(event.originalEvent.dataTransfer);
    // ev.push('dataTransfer');
   //  $.event.addProp('dataTransfer');
-    jQuery.event.props.push('dataTransfer');
+ /*   jQuery.event.props.push('dataTransfer');
     event.dataTransfer.setData("text/html", ev.target.id);}  
   function drop(ev) {  
   ev.preventDefault();  
   var data = ev.dataTransfer.getData("text/html");  
   ev.target.appendChild(document.getElementById(data));  
+  */
   }  
   
   
