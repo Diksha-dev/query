@@ -11,6 +11,7 @@
         var fieldList=[];
         var result = {};
         var url="/asset";
+        var button;
                                       
 
         fetch(url, {  //provide URL of the processing page
@@ -136,12 +137,12 @@
            }
            fieldList.push(obj);
            obj={}; */
-           var button = document.createElement("input");
+                button = document.createElement("input");
                         button.type = "button";
                         button.value = deArray1[i].FieldName;
                         button.setAttribute("draggable","true");
                         button.setAttribute("id","drag1" +i);
-                      //  button.addEventListener("ondragstart",drag(event));
+                      //button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
@@ -156,6 +157,7 @@
 
 
       }
+      button.addEventListener("ondragstart",drag(event));
       
      /* for ( let rec of fieldList ){
         document.getElementById("Fields").innerHTML += rec.fieldName+"     "+rec.DeName+ "<br>";
