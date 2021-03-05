@@ -117,8 +117,6 @@
           {
             console.log("yeh checkbox id hai: " + checkboxes[i].id);
             console.log("yeh hai checkbox ki value json : " + checkboxes[i].name);
-            // console.log("yeh hai checkbox ki value name : " + checkboxes[i].name.name);
-            // console.log("yeh hai checkbox ki value targetName : " + checkboxes[i].name.targetName);
             result[checkboxes[i].id]= checkboxes[i].name;
           //  console.log("checknew "+JSON.stringify(result));
             checkedEmailArray.push(checkboxes[i].id);
@@ -138,8 +136,17 @@
            }
            fieldList.push(obj);
            obj={}; */
+           var button = document.createElement("input");
+           button.type = "button";
+           button.value = deArray1[i].FieldName;
+           
+           button.setAttribute("draggable","true");
+           button.setAttribute("id","drag1" +i);
+           
+           document.getElementById("Fields").appendChild(button) +  "<br>";
+           button.setAttribute('ondragstart',drag(event)) ; 
 
-             document.getElementById("Fields").innerHTML += deArray1[i].FieldName+ "<br>";
+            // document.getElementById("Fields").innerHTML += deArray1[i].FieldName+ "<br>";
             }
         }
        
