@@ -142,11 +142,12 @@
            
            button.setAttribute("draggable","true");
            button.setAttribute("id","drag1" +i);
+           button.addEventListener('ondragstart',drag);
            var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
            
            document.getElementById("Fields").appendChild(NewNode)+ "<br>";
-          // button.setAttribute('ondragstart',drag(event)) ; 
+          // button.setAttribute('ondragstart',drag(event)) ;    
 
             // document.getElementById("Fields").innerHTML += deArray1[i].FieldName+ "<br>";
             }
@@ -253,6 +254,23 @@
 });
     
   });
+
+  function allowDrop(ev) {ev.preventDefault();}  
+  function drag(event) {
+    console.log("ev.target.id-----> " + event.target.id); 
+    console.log(event) ;
+    console.log(event.dataTransfer);
+  //  console.log(event.originalEvent.dataTransfer);
+   // ev.push('dataTransfer');
+  //  $.event.addProp('dataTransfer');
+    jQuery.event.props.push('dataTransfer');
+    event.dataTransfer.setData("text/html", ev.target.id);}  
+  function drop(ev) {  
+  ev.preventDefault();  
+  var data = ev.dataTransfer.getData("text/html");  
+  ev.target.appendChild(document.getElementById(data));  
+  }  
+  
 
 
     </script>
