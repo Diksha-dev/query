@@ -250,20 +250,16 @@
     document.getElementById("Data Extensions").innerHTML = str;
    
    */
-   function allowDrop(ev) {ev.preventDefault();}  
-   function drag(event) {
-     console.log("New Evwnt");}
 
 });
     
   });
 
-  /* function allowDrop(ev) {ev.preventDefault();}  
+  function allowDrop(ev) {ev.preventDefault();}  
   function drag(event) {
-    console.log("New Evwnt");}
     console.log("ev.target.id-----> " + event.target.id); 
-    console.log("New Evwnt"+event) ;
-    console.log("New Evwnt"+event.dataTransfer);
+    console.log(event) ;
+    console.log(event.dataTransfer);
   //  console.log(event.originalEvent.dataTransfer);
    // ev.push('dataTransfer');
   //  $.event.addProp('dataTransfer');
@@ -273,7 +269,8 @@
   ev.preventDefault();  
   var data = ev.dataTransfer.getData("text/html");  
   ev.target.appendChild(document.getElementById(data));  
-  }  */
+  }  
+  
   
 
 
