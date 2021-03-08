@@ -139,10 +139,12 @@
            obj={}; */
                 button = document.createElement("input");
                         button.type = "button";
+                        button.innerText = i;
+                        button.setAttribute('index', i);
                         button.value = deArray1[i].FieldName;
                         button.setAttribute("draggable","true");
                         button.setAttribute("id","drag1" +i);
-                      //button.addEventListener("ondragstart",drag(event));
+                        button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
@@ -158,7 +160,6 @@
 
       }
      // button.addEventListener("ondragstart",drag(event));
-     button.onclick="drag(event)";
       
      /* for ( let rec of fieldList ){
         document.getElementById("Fields").innerHTML += rec.fieldName+"     "+rec.DeName+ "<br>";
@@ -262,6 +263,7 @@
   function drag(event) {
     console.log("ev.target.id-----> " + event.target.id);
     console.log("ev.target.id-----> " + event.target.value); 
+    console.log(event.target.getAttribute('index'));
 //    console.log(event) ;
    // console.log(event.dataTransfer);
   //  console.log(event.originalEvent.dataTransfer);
