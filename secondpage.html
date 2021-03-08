@@ -108,11 +108,13 @@
                 var frameQuery = document.getElementById('Data Extensions');
    
                 var checkboxes = frameQuery.getElementsByTagName('input');
+                console.log("Avichal1 "+checkboxes);
 
            //     console.log(checkboxes) ; 
     var checkedEmailArray = [];
     for (var i = 0; i < checkboxes.length; i++)
       {
+        console.log("Avi "+i);
         if( checkboxes[i].checked == true)
           {
             console.log("yeh checkbox id hai: " + checkboxes[i].id);
@@ -257,7 +259,6 @@
     console.log("Avichal ");
     var frameQ = document.getElementById('Fields');
     var btn = frameQ.getElementsByTagName('input1');
-    console.log("Avichal1 "+btn);
     for (var i = 0; i < btn.length; i++){
       console.log("Avichal1 ");
       if(btn[i].clicked == true){
