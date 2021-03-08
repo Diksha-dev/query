@@ -143,14 +143,10 @@
                         button.setAttribute("id","drag1" +i);
                         button.addEventListener("ondragstart",drag(event));
 
-         var NewNode = document.createElement("LI");
+           var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
            
            document.getElementById("Fields").appendChild(NewNode)+ "<br>";
-           
-          // button.setAttribute('ondragstart',drag(event)) ;    
-
-            // document.getElementById("Fields").innerHTML += deArray1[i].FieldName+ "<br>";
             }
         }
        
