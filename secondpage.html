@@ -256,9 +256,10 @@
   function drag(event) {
     console.log("Avichal ");
     var frameQ = document.getElementById('Fields');
-    for (var i = 0; i < frameQ.length; i++){
+    var btn = frameQ.getElementsByTagName('input1');
+    for (var i = 0; i < btn.length; i++){
       console.log("Avichal1 ");
-      if(frameQ[i].clicked == true){
+      if(btn[i].clicked == true){
        console.log("ev.target.id-----> " + event.target.id);
    // console.log("ev.target.value-----> " + event.target.value); 
   }
