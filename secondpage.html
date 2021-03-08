@@ -133,8 +133,9 @@
                button = document.createElement("INPUT");
                         button.type = "button";
                         button.value = deArray1[i].FieldName;
+                        button.id="drag1" +i
                         button.setAttribute("draggable",true);
-                        button.setAttribute("id","drag1" +i);
+                       // button.setAttribute("id","drag1" +i);
                         button.addEventListener("ondragstart",drag(event));
                        
 
