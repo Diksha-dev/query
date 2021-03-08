@@ -99,8 +99,7 @@
         //    console.log(checkbox.id); 
             
             }; 
-            function handleClick() {
-                document.getElementById("Header").innerHTML="";   
+            function handleClick() {   
                 document.getElementById("Fields").innerHTML="";
                
                 fieldList=[];
@@ -144,22 +143,11 @@
                         button.setAttribute("id","drag1" +i);
                         button.addEventListener("ondragstart",drag(event));
 
-
-
-                        var label=document.createElement('label');
-                        label.setAttribute("for",value); 
-                        label.setAttribute("id",key);
-                        label.innerHTML = value;
-                        document.getElementById("Fields").appendChild(label);
-                        node.appendChild(button);
-                        node.appendChild(label); 
-                       document.getElementById("Fields").appendChild(node);
-
-        /*   var NewNode = document.createElement("LI");
+         var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
            
            document.getElementById("Fields").appendChild(NewNode)+ "<br>";
-           */
+           
           // button.setAttribute('ondragstart',drag(event)) ;    
 
             // document.getElementById("Fields").innerHTML += deArray1[i].FieldName+ "<br>";
