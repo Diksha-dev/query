@@ -108,14 +108,12 @@
                 var frameQuery = document.getElementById('Data Extensions');
    
                 var checkboxes = frameQuery.getElementsByTagName('input');
-                console.log("Avic "+checkboxes);
 
            //     console.log(checkboxes) ; 
     var checkedEmailArray = [];
     for (var i = 0; i < checkboxes.length; i++)
       {
-        console.log("Avi "+ checkboxes[i]);
-        if( checkboxes[i].checked == true)
+     if( checkboxes[i].checked == true)
           {
             console.log("yeh checkbox id hai: " + checkboxes[i].id);
             console.log("yeh hai checkbox ki value json : " + checkboxes[i].name);
@@ -138,7 +136,7 @@
            }
            fieldList.push(obj);
            obj={}; */
-                button = document.createElement("input");
+                button = document.createElement("input1");
                         button.type = "button";
                         button.value = deArray1[i].FieldName;
                         button.setAttribute("draggable","true");
