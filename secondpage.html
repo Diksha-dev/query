@@ -141,7 +141,7 @@
                         button.value = deArray1[i].FieldName;
                         button.setAttribute("draggable","true");
                         button.setAttribute("id","drag1" +i);
-                        button.addEventListener("ondragstart",drag(event));
+                        //button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
@@ -254,8 +254,13 @@
 
   function allowDrop(ev) {ev.preventDefault();}  
   function drag(event) {
+    var frameQ = document.getElementById('Fields');
+    for (var i = 0; i < frameQ.length; i++){
+      if(document.getElementById('button').clicked == true){
     console.log("ev.target.id-----> " + event.target.id);
-    console.log("ev.target.value-----> " + event.target.value); 
+   // console.log("ev.target.value-----> " + event.target.value); 
+  }
+}
 //    console.log(event) ;
    // console.log(event.dataTransfer);
   //  console.log(event.originalEvent.dataTransfer);
