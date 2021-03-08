@@ -254,11 +254,10 @@
 
   function allowDrop(ev) {ev.preventDefault();}  
   function drag(event) {
-    console.log("Avichal ");
     var frameQ = document.getElementById('Fields');
     var btn = frameQ.getElementsByTagName('input1');
     for (var i = 0; i < btn.length; i++){
-      console.log("Avichal1 ");
+      console.log("Avichal1 New ");
       if(btn[i].clicked == true){
        console.log("ev.target.id-----> " + event.target.id);
    // console.log("ev.target.value-----> " + event.target.value); 
