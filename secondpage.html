@@ -99,7 +99,7 @@
         //    console.log(checkbox.id); 
             
             }; 
-            function handleClick() {   
+           /* function handleClick() {   
                 document.getElementById("Fields").innerHTML="";
                
                 fieldList=[];
@@ -130,19 +130,14 @@
         document.getElementById("Fields").appendChild(newdiv);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
-          /* var obj={
-               "fieldName":deArray1[i].FieldName,
-               "DeName":value
-           }
-           fieldList.push(obj);
-           obj={}; */
-                button = document.createElement("INPUT");
+               button = document.createElement("INPUT");
                         button.type = "button";
                         button.value = deArray1[i].FieldName;
                         button.setAttribute("draggable",true);
                         button.setAttribute("id","drag1" +i);
-                       // button.addEventListener("ondragstart",drag(event));
-                       button.addEventListener("onclick",drag());
+                        button.addEventListener("ondragstart",drag(event));
+                       
+
 
 
            var NewNode = document.createElement("LI");
@@ -192,8 +187,8 @@
 
 
       
-            } 
-
+       //     } 
+            
      var url="/fields";
                                       
 
