@@ -141,7 +141,7 @@
                         button.value = deArray1[i].FieldName;
                         button.setAttribute("draggable","true");
                         button.setAttribute("id","drag1" +i);
-                       // button.addEventListener("ondragstart",drag(event));
+                        button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
@@ -252,10 +252,10 @@
     
   });
 
- /* function allowDrop(ev) {ev.preventDefault();}  
+ function allowDrop(ev) {ev.preventDefault();}  
   function drag(event) {
     var frameQ = document.getElementById('Fields');
-    var btn = frameQ.getElementsByTagName('input1');
+    var btn = frameQ.getElementsByTagName('INPUT');
     for (var i = 0; i < btn.length; i++){
       console.log("Avichal1 New ");
       if(btn[i].clicked == true){
@@ -275,7 +275,7 @@
   var data = ev.dataTransfer.getData("text/html");  
   ev.target.appendChild(document.getElementById(data));  
   */
-  //}  
+  }  
   
   
   
