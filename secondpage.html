@@ -126,7 +126,7 @@
 
       for (const [key, NewValue] of Object.entries(result)){
         var newdiv = document.createElement("div");
-        newdiv.innerHTML =value;
+        newdiv.innerHTML =NewValue;
         document.getElementById("Fields").appendChild(newdiv);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
@@ -138,9 +138,9 @@
            obj={}; */
                 button = document.createElement("INPUT");
                         checkbox.setAttribute("type",button);
-                        checkbox.setAttribute("value",NewValue);
+                        checkbox.setAttribute("value",deArray1[i].FieldName);
                         button.setAttribute("draggable",true);
-                        button.setAttribute("id",NewValue);
+                        button.setAttribute("id",deArray1[i].FieldName);
                         button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
