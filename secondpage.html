@@ -124,9 +124,9 @@
           }
       }; 
 
-      for (const [key, NewValue] of Object.entries(result)){
+      for (const [key, value] of Object.entries(result)){
         var newdiv = document.createElement("div");
-        newdiv.innerHTML =NewValue;
+        newdiv.innerHTML =value;
         document.getElementById("Fields").appendChild(newdiv);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
@@ -137,11 +137,11 @@
            fieldList.push(obj);
            obj={}; */
                 button = document.createElement("INPUT");
-                        checkbox.setAttribute("type",button);
-                        checkbox.setAttribute("value",deArray1[i].FieldName);
+                        button.type = "button";
+                        button.value = deArray1[i].FieldName;
                         button.setAttribute("draggable",true);
-                        button.setAttribute("id",deArray1[i].FieldName);
-                        button.addEventListener("ondragstart",drag(event));
+                        button.setAttribute("id","drag1" +i);
+                       // button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
            NewNode.appendChild(button); 
@@ -255,14 +255,13 @@
  function allowDrop(ev) {ev.preventDefault();}  
   function drag(event) {
     var frameQ = document.getElementById('Fields');
-    var btn = frameQ.getElementsByTagName('INPUT');
+    var btn = frameQ.getElementsByTagName('input1');
     for (var i = 0; i < btn.length; i++){
-      console.log("ev.target.id-----> " + event.target.id);
-      console.log("ev.target.value-----> " + event.target.value); 
-     // if(btn[i].clicked == true){
-     //  console.log("ev.target.id-----> " + event.target.id);
+      console.log("Avichal1 New ");
+      if(btn[i].clicked == true){
+       console.log("ev.target.id-----> " + event.target.id);
    // console.log("ev.target.value-----> " + event.target.value); 
-///  }
+  }
     }
 //    console.log(event) ;
    // console.log(event.dataTransfer);
