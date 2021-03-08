@@ -137,10 +137,10 @@
            fieldList.push(obj);
            obj={}; */
                 button = document.createElement("INPUT");
-                        button.type = "button";
-                        button.value = deArray1[i].FieldName;
-                        button.setAttribute("draggable","true");
-                        button.setAttribute("id","drag1" +i);
+                        checkbox.setAttribute("type",button);
+                        checkbox.setAttribute("value",value);
+                        button.setAttribute("draggable",true);
+                        button.setAttribute("id",value);
                         button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
@@ -258,6 +258,7 @@
     var btn = frameQ.getElementsByTagName('INPUT');
     for (var i = 0; i < btn.length; i++){
       console.log("ev.target.id-----> " + event.target.id);
+      console.log("ev.target.value-----> " + event.target.value); 
      // if(btn[i].clicked == true){
      //  console.log("ev.target.id-----> " + event.target.id);
    // console.log("ev.target.value-----> " + event.target.value); 
