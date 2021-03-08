@@ -124,7 +124,7 @@
           }
       }; 
 
-      for (const [key, value] of Object.entries(result)){
+      for (const [key, NewValue] of Object.entries(result)){
         var newdiv = document.createElement("div");
         newdiv.innerHTML =value;
         document.getElementById("Fields").appendChild(newdiv);
@@ -138,9 +138,9 @@
            obj={}; */
                 button = document.createElement("INPUT");
                         checkbox.setAttribute("type",button);
-                        checkbox.setAttribute("value",value);
+                        checkbox.setAttribute("value",NewValue);
                         button.setAttribute("draggable",true);
-                        button.setAttribute("id",value);
+                        button.setAttribute("id",NewValue);
                         button.addEventListener("ondragstart",drag(event));
 
            var NewNode = document.createElement("LI");
