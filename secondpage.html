@@ -157,7 +157,8 @@
 
 
       }
-      button.addEventListener("ondragstart",drag(event));
+     // button.addEventListener("ondragstart",drag(event));
+     button.onclick="drag(event)";
       
      /* for ( let rec of fieldList ){
         document.getElementById("Fields").innerHTML += rec.fieldName+"     "+rec.DeName+ "<br>";
