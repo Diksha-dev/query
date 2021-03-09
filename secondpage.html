@@ -128,14 +128,15 @@
         var newdiv = document.createElement("div");
         newdiv.innerHTML =value;
         document.getElementById("Fields").appendChild(newdiv);
+        console.log(deArray1.length);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
+              console.log(i);
                button = document.createElement("INPUT");
                         button.type = "button";
                         button.value = deArray1[i].FieldName;
                         button.id="drag1" +i
                         button.setAttribute("draggable",true);
-                       // button.setAttribute("id","drag1" +i);
                         button.addEventListener("ondragstart",drag(event));
                        
 
@@ -255,13 +256,13 @@
   function drag(event) {
     var frameQ = document.getElementById('Fields');
       var btn = frameQ.getElementsByTagName('INPUT');
-    for (var i = 0; i < btn.length; i++){
+   /* for (var i = 0; i < btn.length; i++){
       console.log("Avichal1 New ");
        //if(btn[i].isDragging== true){
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
   //}
-    }
+    }*/
 //    console.log(event) ;
    // console.log(event.dataTransfer);
   //  console.log(event.originalEvent.dataTransfer);
