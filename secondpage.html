@@ -128,9 +128,10 @@
         var newdiv = document.createElement("div");
         newdiv.innerHTML =value;
         document.getElementById("Fields").appendChild(newdiv);
-        console.log("Dearray"+deArray1);
-        console.log("key"+key);
-        console.log("value"+value);
+        console.log("Dearray"+JSON.stringify(deArray1));
+        console.log("key "+key);
+        console.log("value "+value);
+        console.log("length "+deArray1.length);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
               console.log(i);
