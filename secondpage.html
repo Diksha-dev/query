@@ -257,14 +257,11 @@
 
   
   document.ondragstart=function(event) {
-   // var frameQ = document.getElementById('Fields');
-    //  var btn = frameQ.getElementsByTagName('INPUT');
-  // for (var i = 0; i < btn.length; i++){
-      console.log("Avichal1 New ");
-       //if(btn[i].isDragging== true){
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
-  //}
+        event.dataTransfer.setData("Text", event.target.value); 
+        document.getElementById("demo").innerHTML = event.target.value; 
+  };
  //   }
 //    console.log(event) ;
    // console.log(event.dataTransfer);
@@ -278,8 +275,18 @@
   var data = ev.dataTransfer.getData("text/html");  
   ev.target.appendChild(document.getElementById(data));  
   */
-  function allowDrop(ev) {ev.preventDefault();} 
-  }  
+  document.ondragover = function(event) { 
+    event.preventDefault(); 
+}; 
+document.ondrop = function(event) { 
+  event.preventDefault(); 
+  var data = event.dataTransfer.getData("Text"); 
+  event.target.appendChild(document.getElementById(data)); 
+  document.getElementById("demo").innerHTML = "Element dropped"; 
+};
+
+  //function allowDrop(ev) {ev.preventDefault();} 
+   
   
   
   
@@ -323,7 +330,7 @@
 
   <div  >
     <div id = "main-div" class="slds-float_right" style="width:64%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-      
+      <p id="demo"></p> 
     </div>
   
     <div class="slds-float_left" style="width:15%;height:100%;">
