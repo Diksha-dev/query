@@ -128,10 +128,10 @@
         var newdiv = document.createElement("div");
         newdiv.innerHTML =value;
         document.getElementById("Fields").appendChild(newdiv);
-        console.log("Dearray"+JSON.stringify(deArray1));
+       /* console.log("Dearray"+JSON.stringify(deArray1));
         console.log("key "+key);
         console.log("value "+value);
-        console.log("length "+deArray1.length);
+        console.log("length "+deArray1.length);*/
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
               console.log("Count"+i);
@@ -260,7 +260,7 @@
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
         event.dataTransfer.setData("Text", event.target.value); 
-        document.getElementById("demo").innerHTML = event.target.value; 
+        document.getElementById("demo").innerHTML += event.target.value; 
   };
  //   }
 //    console.log(event) ;
@@ -278,7 +278,7 @@
   document.ondragover = function(event) { 
     event.preventDefault(); 
 }; 
-document.ondrop = function(event) { 
+  document.ondrop = function(event) { 
   event.preventDefault(); 
   var data = event.dataTransfer.getData("Text"); 
   event.target.appendChild(document.getElementById(data)); 
@@ -329,7 +329,7 @@ document.ondrop = function(event) {
 
 
   <div  >
-    <div id = "main-div" class="slds-float_right" style="width:64%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+    <div id = "main-div" class="slds-float_right slds-card__body slds-card__body_inner" style="width:64%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
       <p id="demo"></p> 
     </div>
   
