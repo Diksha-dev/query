@@ -259,7 +259,7 @@
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
         event.dataTransfer.setData("Text", event.target.value); 
-        document.getElementById("demo").innerHTML += event.target.value; 
+        document.getElementById("demo").innerHTML += event.target.value +','; 
   };
  //   }
 //    console.log(event) ;
@@ -303,7 +303,7 @@
   }
   #marketing-asideRight {
   
-  width:70%;
+  width:100%;
   height: 100%;
   vertical-align:top;
   }
