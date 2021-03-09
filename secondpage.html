@@ -118,7 +118,7 @@
             console.log("yeh checkbox id hai: " + checkboxes[i].id);
             console.log("yeh hai checkbox ki value json : " + checkboxes[i].name);
             result[checkboxes[i].id]= checkboxes[i].name;
-          //  console.log("checknew "+JSON.stringify(result));
+            //console.log("checknew "+JSON.stringify(result));
             checkedEmailArray.push(checkboxes[i].id);
 
           }
@@ -128,7 +128,9 @@
         var newdiv = document.createElement("div");
         newdiv.innerHTML =value;
         document.getElementById("Fields").appendChild(newdiv);
-        console.log(deArray1.length);
+        console.log("Dearray"+deArray1);
+        console.log("key"+key);
+        console.log("value"+value);
         for (var i = 0; i < deArray1.length; i++){
             if(key==deArray1[i].CustomerKey){
               console.log(i);
