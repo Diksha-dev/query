@@ -284,12 +284,19 @@
 }; 
   document.ondrop = function(event) { 
   event.preventDefault(); 
-  var data1 = event.dataTransfer.getData("Text"); 
-  event.target.appendChild(document.getElementById(data1)); 
+  var data = event.dataTransfer.getData("Text"); 
+  event.target.appendChild(document.getElementById(data)); 
   document.getElementById("demo").innerHTML = "Element dropped"; 
 };
+
+  //function allowDrop(ev) {ev.preventDefault();} 
+   
   
-</script>
+  
+  
+
+
+    </script>
 
     <style>
       #marketing-asideLeft {
@@ -301,7 +308,7 @@
   }
   #marketing-asideRight {
   
-  width:100%;
+  width:70%;
   height: 100%;
   vertical-align:top;
   }
@@ -326,8 +333,7 @@
 
 
   <div  >
-  <!----  <div id = "main-div" class="slds-float_right" style="width:100%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> ---->
-      <div id = "main-div" class="slds-float_right" style="width:100%;height:100%;">
+    <div id = "main-div" class="slds-float_right" style="width:100%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
       <p id="demo" contentEditable="true"></p> 
     </div>
   
@@ -343,7 +349,10 @@
                      <div class="slds-nav-vertical__section">
                              <h2 id="entity-header" class="slds-nav-vertical__title"> </h2>
                              <ul aria-describedby="entity-header">
-                             
+                                                        
+                             <!--   <button class="slds-nav-vertical__action slds-button" onclick="contentblockbutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Content blocks</button>    
+                                  <div class="slds-nav-vertical__section" id= "deArray">   </div>        -->
+                                  
                                     <div class="slds-scrollable"  style="height:54rem;width:24rem" >
                                  
                                         <div class="slds-text-longform" id= "Data Extensions" style="width:150%"> 
