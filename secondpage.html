@@ -260,10 +260,10 @@
        console.log("ev.target.value-----> " + event.target.value); 
         event.dataTransfer.setData("Text", event.target.value);
         if(document.getElementById("demo").innerHTML.length == 0){ 
-            document.getElementById("demo").innerHTML += event.target.value; 
+            document.getElementById("demo").innerHTML += event.target.value +' , '; 
         }
         else{ 
-          document.getElementById("demo").innerHTML +=' , '+event.target.value ; 
+          document.getElementById("demo").innerHTML += ' , '+event.target.value ; 
           }
   };
  //   }
@@ -308,7 +308,7 @@
   }
   #marketing-asideRight {
   
-  width:70%;
+  width:100%;
   height: 100%;
   vertical-align:top;
   }
@@ -333,8 +333,8 @@
 
 
   <div  >
-    <div id = "main-div" class="slds-float_right" style="width:100%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-      <p id="demo" contentEditable="true"></p> 
+    <div id = "main-div" class="slds-float_right" style="width:64%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+      <p id="demo"></p> 
     </div>
   
     <div class="slds-float_left" style="width:15%;height:100%;">
@@ -368,12 +368,86 @@
                                                
                                        </div>
                                    </div> 
+                               
+                                 
                              </ul>
                      </div>
                      </nav>
                     </div>
              </div> 
    </div >
+
+   
+   
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-----
+    <div class="slds-float_left" style="width:15%;height:100%;">
+        <div class="slds-panel slds-size_small slds-panel_docked slds-panel_docked-left slds-is-open" style="position: fixed;" aria-hidden="false">
+          <div class="slds-panel__header">
+              <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Data Extensions</h2>
+             </div>
+                 <div class="slds-panel__body">
+  
+                     <div class="demo-only" style="width:100%">
+                     <nav class="slds-nav-vertical" aria-label="Sub page">
+                     <div class="slds-nav-vertical__section">
+                             <h2 id="entity-header" class="slds-nav-vertical__title"> </h2>
+                             <ul aria-describedby="entity-header">
+                        
+                                  
+                                    <div class="slds-scrollable"  style="height:54rem;width:24rem" >
+                                 
+                                         <div class="slds-text-longform" id= "Data Extensions" style="width:150%"> 
+                                                
+                                        </div>
+                                    </div> 
+                                    <div class="slds-panel__header">
+                                        <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Data Extensions Fields</h2>
+                                       </div>
+                                    <div class="slds-scrollable"  style="height:54rem;width:24rem" >
+                                        <div class="slds-panel__header-title slds-text-heading_small slds-truncate" id= "Header" style="width:150%" ></div>
+                                        <div class="slds-text-longform" id= "Fields" style="width:150%" ></div>
+                                       
+                                   </div>
+                                  
+                               
+                                 
+                             </ul>
+                     </div>
+                     </nav>
+                    </div>
+             </div> 
+   </div>
+  </div>
+   <div class="slds-float_right" style="width:85%;height:100%;">
+    <div class="slds-panel slds-size_large slds-is-open" aria-hidden="false">
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Hello</div>
+   </div>
+  </div>
+
+  ---->
+  
+
 </body>
 </html>
