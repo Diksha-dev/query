@@ -258,8 +258,13 @@
   document.ondragstart=function(event) {
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
-        event.dataTransfer.setData("Text", event.target.value); 
-        document.getElementById("demo").innerHTML += event.target.value +','; 
+        event.dataTransfer.setData("Text", event.target.value);
+        if(element.innerHTML.length == 0){ 
+        document.getElementById("demo").innerHTML += event.target.value +' , '; 
+        }
+        else{ 
+          document.getElementById("demo").innerHTML += +' , '+event.target.value ; 
+          }
   };
  //   }
 //    console.log(event) ;
