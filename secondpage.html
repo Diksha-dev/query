@@ -140,7 +140,7 @@
                         button.value = deArray1[i].FieldName;
                         button.id="drag1" +i
                         button.setAttribute("draggable",true);
-                        button.addEventListener("ondragstart",drag);
+                      //  button.addEventListener("ondragstart",drag);
                        
 
 
@@ -255,8 +255,8 @@
   });
   
 
- function allowDrop(ev) {ev.preventDefault();}  
-  function drag(event) {
+  
+  document.ondragstart=function(event) {
    // var frameQ = document.getElementById('Fields');
     //  var btn = frameQ.getElementsByTagName('INPUT');
   // for (var i = 0; i < btn.length; i++){
@@ -278,6 +278,7 @@
   var data = ev.dataTransfer.getData("text/html");  
   ev.target.appendChild(document.getElementById(data));  
   */
+  function allowDrop(ev) {ev.preventDefault();} 
   }  
   
   
