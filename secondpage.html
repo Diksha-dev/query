@@ -288,25 +288,109 @@
     </script>
 
     <style>
-        #marketing-asideLeft {
-    
-    width:30%;
-    height: 80%;
-    vertical-align:top;
-    
-    
-    }
-    #marketing-asideRight {
-    
-    width:70%;
-    height: 100%;
-    vertical-align:top;
-    }
+      #marketing-asideLeft {
   
-    </style>
+  width:30%;
+  height: 80%;
+  vertical-align:top;
+  
+  }
+  #marketing-asideRight {
+  
+  width:70%;
+  height: 100%;
+  vertical-align:top;
+  }
+  #main-div {
+    width: 100px;
+    height: 100px;
+    background-color:lightblue;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+      
+    margin: auto;
+  }
+  </style>
 </head>
 
 <body>
+
+
+
+  <div  >
+    <div id = "main-div" class="slds-float_right" style="width:64%;height:100%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+      
+    </div>
+  
+    <div class="slds-float_left" style="width:15%;height:100%;">
+        <div class="slds-panel slds-size_small slds-panel_docked slds-panel_docked-left slds-is-open" style="position: fixed;" aria-hidden="false">
+          <div class="slds-panel__header">
+              <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Data Extensions</h2>
+             </div>
+                 <div class="slds-panel__body">
+  
+                     <div class="demo-only" style="width:100%">
+                     <nav class="slds-nav-vertical" aria-label="Sub page">
+                     <div class="slds-nav-vertical__section">
+                             <h2 id="entity-header" class="slds-nav-vertical__title"> </h2>
+                             <ul aria-describedby="entity-header">
+                                                        
+                             <!--   <button class="slds-nav-vertical__action slds-button" onclick="contentblockbutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Content blocks</button>    
+                                  <div class="slds-nav-vertical__section" id= "deArray">   </div>        -->
+                                  
+                                    <div class="slds-scrollable"  style="height:54rem;width:24rem" >
+                                 
+                                        <div class="slds-text-longform" id= "Data Extensions" style="width:150%"> 
+                                                
+                                        </div>
+                                    </div> 
+                                    <div class="slds-panel__header">
+                                        <h2 class="slds-panel__header-title slds-text-heading_small slds-truncate" title="Panel Header">Data Extensions Fields</h2>
+                                       </div>
+                                    <div class="slds-scrollable"  style="height:54rem;width:24rem" >
+                                 
+                                        <div class="slds-text-longform" id= "Fields" style="width:150%"> 
+                                               
+                                       </div>
+                                   </div> 
+                               
+                                 
+                             </ul>
+                     </div>
+                     </nav>
+                    </div>
+             </div> 
+   </div >
+
+   
+   
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-----
     <div class="slds-float_left" style="width:15%;height:100%;">
         <div class="slds-panel slds-size_small slds-panel_docked slds-panel_docked-left slds-is-open" style="position: fixed;" aria-hidden="false">
           <div class="slds-panel__header">
@@ -320,9 +404,6 @@
                              <h2 id="entity-header" class="slds-nav-vertical__title"> </h2>
                              <ul aria-describedby="entity-header">
                         
-                                 
-                             <!--   <button class="slds-nav-vertical__action slds-button" onclick="contentblockbutton()" style="padding-top:0px;padding-bottom:0px;padding-left:4px;">Content blocks</button>    
-                                  <div class="slds-nav-vertical__section" id= "deArray">   </div>        -->
                                   
                                     <div class="slds-scrollable"  style="height:54rem;width:24rem" >
                                  
@@ -353,6 +434,8 @@
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Hello</div>
    </div>
   </div>
+
+  ---->
   
 
 </body>
