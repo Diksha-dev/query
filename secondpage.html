@@ -259,7 +259,7 @@
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
         event.dataTransfer.setData("Text", event.target.value);
-        if(element.innerHTML.length == 0){ 
+        if(document.getElementById("demo").innerHTML.length == 0){ 
         document.getElementById("demo").innerHTML += event.target.value +' , '; 
         }
         else{ 
