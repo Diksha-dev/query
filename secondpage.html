@@ -257,7 +257,7 @@
 
   
   document.ondragstart=function(event) {
-    var words='';
+    var words;
     var DeName='';
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
@@ -271,13 +271,13 @@
           }*/
           if(document.getElementById("demo").innerHTML.length == 0){ 
            DeName=event.target.name;
-           words+= 'Select '+event.target.value;
-           document.getElementById("demo").innerHTML = words+' '+ DeName;
+           words+= 'SELECT '+event.target.value;
+           document.getElementById("demo").innerHTML = words+' FROM '+ DeName;
           }
            else{ 
             DeName=event.target.name;
             words += ' , '+event.target.value; 
-            document.getElementById("demo").innerHTML = words+' '+ DeName;
+            document.getElementById("demo").innerHTML = words+' FROM '+ DeName;
             }
   };
  //   }
