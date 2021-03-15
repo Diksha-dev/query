@@ -12,6 +12,7 @@
         var result = {};
         var url="/asset";
         var button;
+        var words;
                                       
 
         fetch(url, {  //provide URL of the processing page
@@ -257,8 +258,7 @@
 
   
   document.ondragstart=function(event) {
-    var words;
-    var DeName='';
+    
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
        console.log("ev.target.name-----> " + event.target.name); 
@@ -270,14 +270,12 @@
           document.getElementById("demo").innerHTML += ' , '+event.target.value ; 
           }*/
           if(document.getElementById("demo").innerHTML.length == 0){ 
-           DeName=event.target.name;
            words+= 'SELECT '+event.target.value;
-           document.getElementById("demo").innerHTML = words+' FROM '+ DeName;
+           document.getElementById("demo").innerHTML = words+' FROM '+ event.target.name;
           }
            else{ 
-            DeName=event.target.name;
             words += ' , '+event.target.value; 
-            document.getElementById("demo").innerHTML = words+' FROM '+ DeName;
+            document.getElementById("demo").innerHTML = words+' FROM '+ event.target.name;
             }
   };
  //   }
