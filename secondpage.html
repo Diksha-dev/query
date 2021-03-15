@@ -270,7 +270,7 @@
           document.getElementById("demo").innerHTML += ' , '+event.target.value ; 
           }*/
           if(document.getElementById("demo").innerHTML.length == 0){ 
-           words+= 'SELECT '+event.target.value;
+           words= 'SELECT '+event.target.value;
            document.getElementById("demo").innerHTML = words+' FROM '+ event.target.name;
           }
            else{ 
