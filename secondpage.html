@@ -261,6 +261,7 @@
     var DeName='';
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
+       onsole.log("ev.target.name-----> " + event.target.name); 
         event.dataTransfer.setData("Text", event.target.value);
        /* if(document.getElementById("demo").innerHTML.length == 0){ 
             document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
@@ -269,11 +270,12 @@
           document.getElementById("demo").innerHTML += ' , '+event.target.value ; 
           }*/
           if(document.getElementById("demo").innerHTML.length == 0){ 
-            DeName=event.target.name;
+           DeName=event.target.name;
            words+= 'Select '+event.target.value+' DeName'; 
           }
            else{ 
-            words += ' , '+event.target.value; 
+            DeName=event.target.name;
+            words += ' , '+event.target.value+' DeName'; ; 
             }
   };
  //   }
