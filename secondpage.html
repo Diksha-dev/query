@@ -260,7 +260,7 @@
        console.log("ev.target.value-----> " + event.target.value); 
         event.dataTransfer.setData("Text", event.target.value);
         if(document.getElementById("demo").innerHTML.length == 0){ 
-            document.getElementById("demo").innerHTML += event.target.value; 
+            document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
         }
         else{ 
           document.getElementById("demo").innerHTML += ' , '+event.target.value ; 

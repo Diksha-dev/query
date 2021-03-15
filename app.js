@@ -180,6 +180,50 @@ app.post("/secondpage", async function (req, res) {
 });
 
 
+
+app.post("/query", async (reqCall,resCall)=>
+   {
+    console.log("yeh app query fields wale me hai token " + access_token);
+    var options = {
+      'method': 'POST',
+      'url': 'https://mc6vgk-sxj9p08pqwxqz9hw9-4my.soap.marketingcloudapis.com/Service.asmx',
+      'headers': {
+        'Content-Type': 'text/xml',
+        'SOAPAction': 'Create'
+      },
+      body: '<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">\r\n    <SOAP-ENV:Header>\r\n        <fueloauth>' + access_token + '</fueloauth>\r\n    </SOAP-ENV:Header>\r\n    <SOAP-ENV:Body>\r\n        <CreateRequest xmlns="http://exacttarget.com/wsdl/partnerAPI">\r\n            <Options></Options>\r\n            <Objects xsi:type="QueryDefinition">\r\n                <PartnerKey xsi:nil="true"></PartnerKey>\r\n                <ObjectID xsi:nil="true"></ObjectID>\r\n                <!--<CategoryID>68371</CategoryID>-->\r\n                <Name>New Query</Name>\r\n                <Description>test</Description>\r\n                <QueryText>SELECT [First Name],[Email Address] as [Email Id] FROM NTOSubscribers</QueryText>\r\n                <TargetType>DE</TargetType>\r\n                <DataExtensionTarget>\r\n                    <PartnerKey xsi:nil="true"></PartnerKey>\r\n                    <ObjectID xsi:nil="true"></ObjectID>\r\n                    <CustomerKey>DE992E56-58C9-490B-BF5B-3F6EAC5EF94E</CustomerKey>\r\n                    <Name>DE for Query</Name>\r\n                </DataExtensionTarget>\r\n                <TargetUpdateType>Update</TargetUpdateType>\r\n            </Objects>\r\n        </CreateRequest>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>'
+    
+    };
+    request(options, function (error, response)  {
+      if (error) throw new Error(error);
+       
+      var queryRes = response.body;
+     
+
+        xml2jsParser.parseString(queryRes, function (err, result) {
+        console.log('mera result : ' + JSON.stringify(result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results']));
+        //queryRes = result['soap:Envelope']['soap:Body'][0]['RetrieveResponseMsg'][0]['Results'];
+        // console.log('my new result '+JSON.stringify(SourceDEFieldsResult));
+        });
+      /* for (var key in SourceDEFieldsResult) {
+       // DEListMap[SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]] = {
+        DEListMap= {
+          "FieldName": SourceDEFieldsResult[key].Name[0],
+          "CustomerKey":SourceDEFieldsResult[key].DataExtension[0].CustomerKey[0]
+       };
+        favorites.push(DEListMap);
+ }
+
+       console.log("DEListMap" + JSON.stringify(favorites)); 
+    
+        resCall.json({favorites : favorites});
+*/
+
+   });
+
+});
+
+
 async function getacesstoken(ClientIdDestination,ClientSecretDestination,GrantTypeDestination)
   {
     try
