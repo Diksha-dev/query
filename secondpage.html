@@ -137,6 +137,7 @@
                button = document.createElement("INPUT");
                         button.type = "button";
                         button.value = deArray1[i].FieldName;
+                        button.name=deArray1[i].CustomerKey;
                         button.id="drag1" +i
                         button.setAttribute("draggable",true);
                       //  button.addEventListener("ondragstart",drag);
@@ -256,15 +257,24 @@
 
   
   document.ondragstart=function(event) {
+    var words='';
+    var DeName='';
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
         event.dataTransfer.setData("Text", event.target.value);
-        if(document.getElementById("demo").innerHTML.length == 0){ 
+       /* if(document.getElementById("demo").innerHTML.length == 0){ 
             document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
         }
         else{ 
           document.getElementById("demo").innerHTML += ' , '+event.target.value ; 
+          }*/
+          if(document.getElementById("demo").innerHTML.length == 0){ 
+            DeName=event.target.name;
+           words+= 'Select '+event.target.value+' DeName'; 
           }
+           else{ 
+            words += ' , '+event.target.value; 
+            }
   };
  //   }
 //    console.log(event) ;
