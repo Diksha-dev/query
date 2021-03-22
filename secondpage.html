@@ -68,8 +68,8 @@
 
      //dataextensionArray.forEach(function(slide) {
         for (const [keyimage, value] of Object.entries(parsedData)){
-        //      str += '<input type="checkbox" id = "checkbox" onclick=' + "handleClick()" + '>'+ slide  + '<br />';
-       // console.log("yeh for loop ki slide hai" + dataextensionArray);
+       //      str += '<input type="checkbox" id = "checkbox" onclick=' + "handleClick()" + '>'+ slide  + '<br />';
+      // console.log("yeh for loop ki slide hai" + dataextensionArray);
               var checkbox = document.createElement('input');
                           checkbox.setAttribute("type","checkbox"); 
                           checkbox.setAttribute("id",keyimage);
@@ -344,6 +344,9 @@
   <div  >
     <div id = "main-div" class="slds-float_right" style="width: 82%;height:100%;margin-left: 17%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
       <p id="demo" contentEditable="true"></p> 
+    </div>
+    <div id = "button1"> 
+      <button class="button">Validate Query</button>
     </div>
   
     <div class="slds-float_left" style="width:15%;height:100%;">
