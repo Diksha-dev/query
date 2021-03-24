@@ -270,11 +270,19 @@
    
   
   $( function() {
-    $( "#drag" ).draggable();
+    $( "#drag" ).draggable(
+      {
+        drag:function()
+        {
+        console.log("Drag hua h");
+        }
+      }
+    );
     $( "#drop" ).droppable(
         {
             drop :function(event,ui)
         {
+          console.log("Drop hua h");
         console.log(ui.draggable.attr('id') + ' was dropped from ');
            
         }
