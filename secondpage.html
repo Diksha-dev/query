@@ -256,7 +256,10 @@
   
   document.ondragstart=function(event) {
     
-        
+    console.log("-----------On Start----------------------------");
+  console.log("ev.target.id-----> "+event.target.id);
+       console.log("ev.target.value-----> " + event.target.value); 
+       console.log("ev.target.name-----> " + event.target.name);
         event.dataTransfer.setData("Text", event.target.value);
        /* if(document.getElementById("demo").innerHTML.length == 0){ 
             document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
