@@ -1,64 +1,102 @@
-<!DOCTYPE html>   
-<html>   
-<head> 
-<meta name="viewport" content="width=device-width, initial-scale=1">  
-<title> Client Credintials </title>  
-<style>   
-Body {  
-  font-family: Calibri, Helvetica, sans-serif;  
-  background-color: lightblue;  
-}  
-button {   
-       background-color: blue;   
-       width: 100%;  
-        color: white;   
-        padding: 15px;   
-        margin: 10px 0px;   
-        border: none;   
-        cursor: pointer;   
-         }   
- form {   
-        border: 3px solid #f1f1f1;   
-    }   
- input[type=text], input[type=text] {   
-        width: 100%;   
-        margin: 8px 0;  
-        padding: 12px 20px;   
-        display: inline-block;   
-        border: 2px solid green;   
-        box-sizing: border-box;   
-    }  
- button:hover {   
-        opacity: 0.7;   
-    }   
-  .cancelbtn {   
-        width: auto;   
-        padding: 10px 18px;  
-        margin: 10px 5px;  
-    }   
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js" ></script>
+    <title>Content Buider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.13.7/styles/salesforce-lightning-design-system.min.css" integrity="sha512-UV/bdfkf/vUvwZ6/aVq8zas293BNyu43i68QdurkfUmSjGRiCxKISDe29R6VPB3YKfeA/lCjGyfXLBIzlpTg5A==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/html" href=".views/assets/input.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.13.7/styles/salesforce-lightning-design-system.sanitized.min.css" integrity="sha512-O9RC97AHIeSWK6mAA/b1GBPzrBsmNBT8nN2yz6vghHn0Eatt4P7ilv4H+uO5mp7WIDh9sKbUoKSg3pGsPM8ShA==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.13.7/styles/salesforce-lightning-design-system_touch.min.css" integrity="sha512-5j2QXzkr/ZIuvsLKYgRr8HEfAx5D+Mg0dFDCSGwKR2GKcdZbJSynKdirYGVGRVWLz9ryxV4/0kfoCGffJD3fQw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="Front.css">
+    </head>
+
+<body class="" data-new-gr-c-s-check-loaded="14.997.0" data-gr-ext-installed="">
+		<div class="mainWrapper">
+			<div class="contentWrapper">
+				<div class="mainFormWrapper ">
+					<div class="header-wrapper">
+						<div class="header">
+							<div id="header-logo"></div>
+						</div>
+					</div>
+
+<script type="text/javascript">
+function startTimer(duration, display) {
+    var start = Date.now();
+    function timer() {
+        diff = duration - (((Date.now() - start) / 1000) | 0);
+        display.textContent = diff;
+        if (diff <= 0) {
+    		document.getElementById("loginEventId").value = 'timeout';
+    		document.getElementById("LoginForm").submit();
+        }
+    };
+    timer();
+    setInterval(timer, 1000);
+}
+window.onload = function () {
+    var time = 1680;
+	if(time > 0){
+		var display = document.querySelector('#time');
+		startTimer(time, display);
+	}
+};
+</script>
+
+
+<form id="LoginForm" class="mainForm" action="" method="post" autocomplete="off">
+
+	<div id="jsBrowserDetectionTop" class="notification error" style="display:none"></div>
+
+	<div class="slds-form-element">
+		<div class="slds-form-element__label"><label for="username">Client Id</label></div>
+		<div class="slds-form-element__control">
+			<input id="username"  style="padding:5px;" name="username" class="slds-input username mt8 mb8" aria-describedby="username-errors" autofocus="autofocus" type="text" value="">
+		</div>
         
-     
- .container {   
-        padding: 25px;   
-        background-color: white;  
-    }   
-</style>   
-</head>    
-<body>  
-    <center> <h1> Salesforce Marketing Cloud </h1> </center>   
-    <form action="/secondpage" method="post">  
-        <div class="container"> 
-            <label>Client Id : </label>   
-            <input type="text" placeholder="Enter ClientId" name="clientid" id="clientid" required>  
-            <label>Client Secret : </label>   
-            <input type="text" placeholder="Enter Client Secret" name="clientsecret" id="clientsecret" required> 
-            <label>Auth Url : </label>   
-            <input type="text" placeholder="Enter Auth Url" name="authurl" id="authurl" required> 
- 		    <button type="submit">Submit</button>
-         <!----   <button id="myButton" type="submit">Submit</button>   ----> 
-            <button type="button" class="cancelbtn"> Cancel</button>     
-        </div>   
-    </form>
+		<div class="slds-form-element__help">
+            <div class="slds-form-element__label"><label for="username">Client Secret</label></div>
+		<div class="slds-form-element__control">
+			<input style="padding:5px;" id="username" name="username" class="slds-input username mt8 mb8" aria-describedby="username-errors" autofocus="autofocus" type="text" value="">
+		</div>
+
+        <div class="slds-form-element__label"><label for="username">MID</label></div>
+		<div class="slds-form-element__control">
+			<input style="padding:5px;" id="username" name="username" class="slds-input username mt8 mb8" aria-describedby="username-errors" autofocus="autofocus" type="text" value="">
+		</div>
+
+        <div class="slds-form-element__label"><label for="username">Grant Type</label></div>
+		<div class="slds-form-element__control">
+			<input style="padding:5px;" id="username" name="username" class="slds-input username mt8 mb8" aria-describedby="username-errors" autofocus="autofocus" type="text" value="">
+		</div>
+			
+		</div>
+	</div>
+
+	<!-- Don't change the style name of the Login input (".submit-btn") without contacting the Security team, as WebMetrics has a dependency on this value.Â&nbsp; -->
+	<input type="submit" id="submit-btn" value="Submit" class="submit-btn slds-button slds-button_brand mb16" style="background-color: #53ba00;">
+
+	<div id="jsBrowserDetectionBottom" style="display:none"></div>
+</form>
+
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-content">
+					<div class="footer-links">
+						© 2021 salesforce.com, inc. All rights reserved. | <a href="https://www.marketingcloud.com/privacy-policy" class="blue" rel="noopener noreferrer" target="_blank">Privacy</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="marketing-aside" class="bb-hide">
+			<iframe frameborder="0" id="marketing" name="marketing" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" scrolling="no" src="https://cyntexa.com/careers/" tabindex="-1" title="Marketing"></iframe>
+		</div>
+		<script src="/hub-cas/assets/scripts.js?v=1.3.2"></script>
+		<script type="text/javascript" src="/hub-cas/js/login.js?v=1.3.2"></script>
 	
-</body>     
-</html>  
+</body>
+</html>
