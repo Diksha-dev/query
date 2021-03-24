@@ -253,60 +253,22 @@
   });
   
 
-  
-  document.ondragstart=function(event) {
-    
-    console.log("-----------On Start----------------------------");
-  console.log("ev.target.id-----> "+event.target.id);
-       console.log("ev.target.value-----> " + event.target.value); 
-       console.log("ev.target.name-----> " + event.target.name);
-        event.dataTransfer.setData("Text", event.target.value);
-       /* if(document.getElementById("demo").innerHTML.length == 0){ 
-            document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
-        }
-        else{ 
-          document.getElementById("demo").innerHTML += ' , '+event.target.value ; 
-          }*/
-          if(document.getElementById("demo").innerHTML.length == 0){ 
-           words= 'SELECT '+event.target.value;
-           document.getElementById("demo").innerHTML = words+' FROM '+ event.target.name;
-          }
-           else{ 
-            words += ' , '+event.target.value; 
-            document.getElementById("demo").innerHTML = words+' FROM '+ event.target.name;
-            }
-  };
- //   }
-//    console.log(event) ;
-   // console.log(event.dataTransfer);
-  //  console.log(event.originalEvent.dataTransfer);
-   // ev.push('dataTransfer');
-  //  $.event.addProp('dataTransfer');
- /*   jQuery.event.props.push('dataTransfer');
-    event.dataTransfer.setData("text/html", ev.target.id);}  
-  function drop(ev) {  
-  ev.preventDefault();  
-  var data = ev.dataTransfer.getData("text/html");  
-  ev.target.appendChild(document.getElementById(data));  
-  */
-  document.ondragover = function(event) { 
-    event.preventDefault(); 
-}; 
-  document.ondrop = function(event) { 
-  event.preventDefault(); 
-  console.log("-----------On Drop----------------------------");
-  console.log("ev.target.id-----> "+event.target.id);
-       console.log("ev.target.value-----> " + event.target.value); 
-       console.log("ev.target.name-----> " + event.target.name);
-  var data1 = event.dataTransfer.getData("Text"); 
-  event.target.appendChild(document.getElementById(data1)); 
-  document.getElementById("demo").innerHTML = "Element dropped"; 
-};
+
 
   //function allowDrop(ev) {ev.preventDefault();} 
    
   
-  
+  $( function() {
+    $( "#drag" ).draggable();
+    $( "#drop" ).droppable(
+        {
+            drop :function(event,ui)
+        {
+        console.log(ui.draggable.attr('id') + ' was dropped from ');
+           
+        }
+        } );
+        } );
   
 
 
