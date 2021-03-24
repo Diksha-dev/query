@@ -256,9 +256,7 @@
   
   document.ondragstart=function(event) {
     
-       console.log("ev.target.id-----> "+event.target.id);
-       console.log("ev.target.value-----> " + event.target.value); 
-       console.log("ev.target.name-----> " + event.target.name); 
+        
         event.dataTransfer.setData("Text", event.target.value);
        /* if(document.getElementById("demo").innerHTML.length == 0){ 
             document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
@@ -293,6 +291,10 @@
 }; 
   document.ondrop = function(event) { 
   event.preventDefault(); 
+  console.log("-----------On Drop----------------------------");
+  console.log("ev.target.id-----> "+event.target.id);
+       console.log("ev.target.value-----> " + event.target.value); 
+       console.log("ev.target.name-----> " + event.target.name);
   var data1 = event.dataTransfer.getData("Text"); 
   event.target.appendChild(document.getElementById(data1)); 
   document.getElementById("demo").innerHTML = "Element dropped"; 
