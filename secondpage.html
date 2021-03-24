@@ -136,16 +136,13 @@ for (const [key, value] of Object.entries(result)){
   var newdiv = document.createElement("div");
   newdiv.innerHTML =value;
   document.getElementById("Fields").appendChild(newdiv);
- /* console.log("Dearray"+JSON.stringify(deArray1));
-  console.log("key "+key);
-  console.log("value "+value);
-  console.log("length "+deArray1.length);*/
+ 
   for (var i = 0; i < deArray1.length; i++){
       if(key==deArray1[i].CustomerKey){
-var div=document.createElement("div");
-                  div.name=deArray1[i].CustomerKey;
-                  div.id="drag1" +i;
-div.setAttribute("draggable",true);
+      var div=document.createElement("div");
+      div.name=deArray1[i].CustomerKey;
+      div.id="drag1" +i;
+      div.setAttribute("draggable",true);
 
 
          button = document.createElement("input");
@@ -153,11 +150,9 @@ div.setAttribute("draggable",true);
                  
                   button.value = deArray1[i].FieldName;
 div.append(button);
-     var NewNode = document.createElement("LI");
-     NewNode.appendChild(div);
-
      
-     document.getElementById("Fields").appendChild(NewNode)+ "<br>";
+     
+     document.getElementById("Fields").appendChild(div)+ "<br>";
       }
   }
  
