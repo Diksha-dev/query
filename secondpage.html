@@ -133,16 +133,15 @@ if( checkboxes[i].checked == true)
 }; 
 
 for (const [key, value] of Object.entries(result)){
-var div=document.createElement('div');
-  var html='<h1 align="center">'+value+'</h1>';
+//var div=document.createElement('div');
+ // var html='<h1 align="center">'+value+'</h1>';
  
   for (var i = 0; i < deArray1.length; i++)
   {
       if(key==deArray1[i].CustomerKey)
       {
-        html=html+' <div id="drag1"'+i+' name="'+deArray1[i].CustomerKey+'" draggable="true"><button value="'+deArray1[i].FieldName+'">'+deArray1[i].FieldName+'</button></div>';
-        
-        document.getElementById("Fields").appendChild(httml) ;
+        var html=' <h1 align="center">'+value+'</h1><div id="drag1"'+i+' name="'+deArray1[i].CustomerKey+'" draggable="true"><button value="'+deArray1[i].FieldName+'">'+deArray1[i].FieldName+'</button></div>'; 
+        document.getElementById("Fields").appendChild(html) ;
      
       }
      }
