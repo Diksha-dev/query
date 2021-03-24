@@ -133,28 +133,17 @@ if( checkboxes[i].checked == true)
 }; 
 
 for (const [key, value] of Object.entries(result)){
-  var newdiv = document.createElement("div");
-  newdiv.innerHTML =value;
-  document.getElementById("Fields").appendChild(newdiv);
+
+  var html='<h1 align="center">'+value+'</h1>';
  
-  for (var i = 0; i < deArray1.length; i++){
-      if(key==deArray1[i].CustomerKey){
-      var div=document.createElement("div");
-      div.name=deArray1[i].CustomerKey;
-      div.id="drag1" +i;
-      div.setAttribute("draggable",true);
-
-
-         button = document.createElement("input");
-         button.type='button'
-                 
-                  button.value = deArray1[i].FieldName;
-div.append(button);
-     
-     
-     document.getElementById("Fields").appendChild(div)+ "<br>";
+  for (var i = 0; i < deArray1.length; i++)
+  {
+      if(key==deArray1[i].CustomerKey)
+      {
+        html=html+' <div id="drag1"'+i+' name="'+deArray1[i].CustomerKey+'" draggable="true"><button value="'+deArray1[i].FieldName+'">'+deArray1[i].FieldName+'</button></div>';
+     document.getElementById("Fields").appendChild(html)+ "<br>";
       }
-  }
+     }
  
 
 
