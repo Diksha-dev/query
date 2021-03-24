@@ -102,6 +102,11 @@ app.post("/secondpage", async function (req, res) {
       //   targetDEArray.push(ResultList[key].Name);
        //   ResultListMap[ResultList[key].Name] = ResultList[key] ; 
         }
+        for (var i in targetDEArray)
+        {
+          console.log(i);
+          console.log(targetDEArray[i]);
+        }
         console.log("targetDEArray    :   " +  targetDEArray);
      
         resCall.json({targetDEArray : targetDEArray});
@@ -170,7 +175,7 @@ app.post("/secondpage", async function (req, res) {
           
         }
 
-       console.log("DEListMap" + JSON.stringify(favorites)); 
+     //  console.log("DEListMap" + JSON.stringify(favorites)); 
     
         resCall.json({favorites : favorites});
 
