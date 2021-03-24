@@ -149,12 +149,9 @@ div.value = deArray1[i].FieldName;
 div.setAttribute("draggable",true);
 
 
-         button = document.createElement("INPUT");
-                  button.type = "button";
+         button = document.createElement("button");
+                 
                   button.value = deArray1[i].FieldName;
-
-                  button.setAttribute("draggable",true);
-                //  button.addEventListener("ondragstart",drag);
 div.append(button);
      var NewNode = document.createElement("LI");
      NewNode.appendChild(div);
