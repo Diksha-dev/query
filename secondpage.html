@@ -257,7 +257,7 @@ ev.preventDefault();
        console.log("ev.target.value-----> " + event.target.value); 
        console.log("ev.target.name-----> " + event.target.name); 
        var obj={id:event.target.id,value:event.target.value,name:event.target.name};
-        event.dataTransfer.setData("text/plain", obj);
+        event.dataTransfer.setData("text/plain", JSON.stringify(obj));
 
        /* if(document.getElementById("demo").innerHTML.length == 0){ 
             document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
@@ -300,15 +300,8 @@ ev.preventDefault();
   //event.target.appendChild(document.getElementById(data1));
  // var data1=JSON.stringify(data2);
   console.log("Data-------------",data1);
-  for (var info in data1)
-  {
-    console.log(data1.value);
-  console.log(data1.name);
-  console.log(data1.id);
-    var value=data1.value;
-    var id=data1.id;
-    var name=data1.name;
-  }
+  console.log(data1.value);
+  
  
 
   if(document.getElementById("demo").innerHTML.length == 0){ 
