@@ -296,10 +296,10 @@ ev.preventDefault();
   event.preventDefault(); 
   
 
-  var data1 = event.dataTransfer.getData("text/plain"); 
+  var data2 = event.dataTransfer.getData("text/plain"); 
   //event.target.appendChild(document.getElementById(data1));
-  
-  console.log("Data-------------",data1);
+  var data1=JSON.stringify(obj);
+  console.log("Data-------------",JSON.stringify(obj));
   console.log(data1.value);
   console.log(data1.name);
   console.log(data1.id);
