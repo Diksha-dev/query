@@ -288,7 +288,7 @@ ev.preventDefault();
   document.ondragover = function(event) { 
     event.preventDefault(); 
 }; 
-  document.ondrop = function(event) { 
+  document.ondrop = function(event,target) { 
   event.preventDefault(); 
   console.log("Id");
   console.log(target.id, ev.target.id)
