@@ -296,24 +296,17 @@ ev.preventDefault();
   event.preventDefault(); 
   
 
-  var data1 = event.dataTransfer.getData("text/plain"); 
+  var datafromDrag = event.dataTransfer.getData("text/plain"); 
   //event.target.appendChild(document.getElementById(data1));
- // var data1=JSON.stringify(data2);
-  console.log("Data-------------",data1);
-  console.log(data1.value);
-  var a=JSON.parse(data1);
-  console.log(a.value);
-
-  
- 
+  var parsedDragData=JSON.stringify(datafromDrag);
 
   if(document.getElementById("demo").innerHTML.length == 0){ 
-           words= 'SELECT '+data.value;
-           document.getElementById("demo").innerHTML = words+' FROM '+ data.name;
+           words= 'SELECT '+parsedDragData.value;
+           document.getElementById("demo").innerHTML = words+' FROM '+ parsedDragData.name;
           }
            else{ 
-            words += ' , '+data.value; 
-            document.getElementById("demo").innerHTML = words+' FROM '+ data.name;
+            words += ' , '+parsedDragData.value; 
+            document.getElementById("demo").innerHTML = words+' FROM '+ parsedDragData.name;
             } 
 };
 
