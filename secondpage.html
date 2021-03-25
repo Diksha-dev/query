@@ -265,6 +265,7 @@ ev.preventDefault();
         else{ 
           document.getElementById("demo").innerHTML += ' , '+event.target.value ; 
           }*/
+          /*
           if(document.getElementById("demo").innerHTML.length == 0){ 
            words= 'SELECT '+event.target.value;
            document.getElementById("demo").innerHTML = words+' FROM '+ event.target.name;
@@ -272,7 +273,7 @@ ev.preventDefault();
            else{ 
             words += ' , '+event.target.value; 
             document.getElementById("demo").innerHTML = words+' FROM '+ event.target.name;
-            }
+            }*/
   };
  //   }
 //    console.log(event) ;
@@ -293,19 +294,21 @@ ev.preventDefault();
   //document.ondrop = function(event,target) {
     function drop(event, target) { 
   event.preventDefault(); 
-  console.log("Id");
-  console.log("ev.target.id-----> "+event.target.id);
-       console.log("ev.target.value-----> " + event.target.value); 
-       console.log("ev.target.name-----> " + event.target.name); 
-       console.log("Element ",event.srcElement);
-       console.log(target.id);
-       console.log(event.target.id);
+  
 
-  var data1 = event.dataTransfer.getData("text/plain"); 
+  var data = event.dataTransfer.getData("text/plain"); 
   //event.target.appendChild(document.getElementById(data1));
   
-  console.log("Data-------------",data1);
-  document.getElementById("demo").innerHTML = "Element dropped"; 
+  console.log("Data-------------",data);
+
+  if(document.getElementById("demo").innerHTML.length == 0){ 
+           words= 'SELECT '+data.value;
+           document.getElementById("demo").innerHTML = words+' FROM '+ data.name;
+          }
+           else{ 
+            words += ' , '+data.value; 
+            document.getElementById("demo").innerHTML = words+' FROM '+ data.name;
+            } 
 };
 
   //function allowDrop(ev) {ev.preventDefault();} 
