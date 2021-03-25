@@ -296,10 +296,13 @@ ev.preventDefault();
   event.preventDefault(); 
   
 
-  var data = event.dataTransfer.getData("text/plain"); 
+  var data1 = event.dataTransfer.getData("text/plain"); 
   //event.target.appendChild(document.getElementById(data1));
   
-  console.log("Data-------------",data);
+  console.log("Data-------------",data1);
+  console.log(data1.value);
+  console.log(data1.name);
+  console.log(data1.id);
 
   if(document.getElementById("demo").innerHTML.length == 0){ 
            words= 'SELECT '+data.value;
