@@ -256,7 +256,9 @@ ev.preventDefault();
        console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
        console.log("ev.target.name-----> " + event.target.name); 
-        event.dataTransfer.setData("Text", event.target.value);
+       var obj={id:event.target.id,value:event.target.value,name:event.target.name};
+        event.dataTransfer.setData("text/plain", JSON.stringify(obj));
+
        /* if(document.getElementById("demo").innerHTML.length == 0){ 
             document.getElementById("demo").innerHTML += 'Select '+event.target.value; 
         }
@@ -299,7 +301,7 @@ ev.preventDefault();
        console.log(target.id);
        console.log(event.target.id);
 
-  var data1 = event.dataTransfer.getData("Text"); 
+  var data1 = event.dataTransfer.getData("text/plain"); 
   //event.target.appendChild(document.getElementById(data1));
   
   console.log("Data-------------",data1);
