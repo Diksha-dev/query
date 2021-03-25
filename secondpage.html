@@ -247,7 +247,10 @@
   });
   
 
-  
+  function allowDrop(ev) {
+ev.preventDefault();
+}
+
   document.ondragstart=function(event) {
     
        console.log("ev.target.id-----> "+event.target.id);
@@ -288,7 +291,7 @@
   document.ondrop = function(event) { 
   event.preventDefault(); 
   var data1 = event.dataTransfer.getData("Text"); 
-  event.target.appendChild(document.getElementById(data1));
+  //event.target.appendChild(document.getElementById(data1));
   
   console.log("Data-------------",data1);
   document.getElementById("demo").innerHTML = "Element dropped"; 
@@ -349,7 +352,7 @@
 
 
   <div  >
-    <div id = "main-div" class="slds-float_right" style="width: 82%;height:100%;margin-left: 17%;" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+    <div id = "main-div" class="slds-float_right" style="width: 82%;height:100%;margin-left: 17%;"  ondragover="allowDrop(event)"> 
       <p id="demo" contentEditable="true"></p> 
        
         <button class="button1">Validate Query</button>
