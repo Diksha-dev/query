@@ -291,7 +291,9 @@ ev.preventDefault();
   document.ondrop = function(event,target) { 
   event.preventDefault(); 
   console.log("Id");
-  console.log(target.id, ev.target.id)
+  console.log("ev.target.id-----> "+event.target.id);
+       console.log("ev.target.value-----> " + event.target.value); 
+       console.log("ev.target.name-----> " + event.target.name); 
 
   var data1 = event.dataTransfer.getData("Text"); 
   //event.target.appendChild(document.getElementById(data1));
