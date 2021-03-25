@@ -290,6 +290,9 @@ ev.preventDefault();
 }; 
   document.ondrop = function(event) { 
   event.preventDefault(); 
+  console.log("Id");
+  console.log(target.id, ev.target.id)
+
   var data1 = event.dataTransfer.getData("Text"); 
   //event.target.appendChild(document.getElementById(data1));
   
