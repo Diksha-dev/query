@@ -288,14 +288,15 @@ ev.preventDefault();
   document.ondragover = function(event) { 
     event.preventDefault(); 
 }; 
-  document.ondrop = function(event,target) { 
+  //document.ondrop = function(event,target) {
+    function drop(event, target) { 
   event.preventDefault(); 
   console.log("Id");
   console.log("ev.target.id-----> "+event.target.id);
        console.log("ev.target.value-----> " + event.target.value); 
        console.log("ev.target.name-----> " + event.target.name); 
        console.log(target.id);
-       console.log(ev.target.id);
+       console.log(event.target.id);
 
   var data1 = event.dataTransfer.getData("Text"); 
   //event.target.appendChild(document.getElementById(data1));
@@ -359,7 +360,7 @@ ev.preventDefault();
 
 
   <div  >
-    <div id = "main-div" class="slds-float_right" style="width: 82%;height:100%;margin-left: 17%;"  ondragover="allowDrop(event)"> 
+    <div id = "main-div" class="slds-float_right" style="width: 82%;height:100%;margin-left: 17%;" ondrop="drop(event, this)"  ondragover="allowDrop(event)"> 
       <p id="demo" contentEditable="true"></p> 
        
         <button class="button1">Validate Query</button>
