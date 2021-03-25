@@ -298,7 +298,7 @@ ev.preventDefault();
 
   var datafromDrag = event.dataTransfer.getData("text/plain"); 
   //event.target.appendChild(document.getElementById(data1));
-  var parsedDragData=JSON.stringify(datafromDrag);
+  var parsedDragData=JSON.parse(datafromDrag);
 
   if(document.getElementById("demo").innerHTML.length == 0){ 
            words= 'SELECT '+parsedDragData.value;
